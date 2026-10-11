@@ -1,0 +1,1813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SEO Executive Portfolio | Memuna Gandhi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+:root {
+  --ink: #0d0d0d;
+  --paper: #f5f0e8;
+  --cream: #ede8dc;
+  --gold: #c9a84c;
+  --gold-light: #e8d5a3;
+  --green: #2d5a3d;
+  --green-light: #e8f0eb;
+  --rust: #b5451b;
+  --rust-light: #f5e8e4;
+  --blue: #1a3a5c;
+  --blue-light: #e4edf5;
+  --purple: #4a2d7a;
+  --purple-light: #ede8f5;
+  --teal: #1a5c54;
+  --teal-light: #e4f0ef;
+  --serif: 'Playfair Display', Georgia, serif;
+  --sans: 'DM Sans', sans-serif;
+  --mono: 'DM Mono', monospace;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(245,240,232,0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 3rem;
+  height: 60px;
+}
+.nav-logo { font-family: var(--serif); font-size: 1.1rem; font-weight: 700; color: var(--ink); letter-spacing: -0.01em; }
+.nav-links { display: flex; gap: 2rem; }
+.nav-links a { font-size: 13px; font-weight: 500; color: #666; text-decoration: none; letter-spacing: 0.04em; text-transform: uppercase; transition: color 0.2s; }
+.nav-links a:hover { color: var(--gold); }
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 100px 3rem 4rem;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; top: -20%; right: -10%;
+  width: 700px; height: 700px;
+  background: radial-gradient(circle, rgba(201,168,76,0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-eyebrow {
+  font-family: var(--mono);
+  font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 1.5rem;
+  display: flex; align-items: center; gap: 12px;
+}
+.hero-eyebrow::before { content: ''; width: 40px; height: 1px; background: var(--gold); }
+.hero h1 {
+  font-family: var(--serif);
+  font-size: clamp(3rem, 6vw, 6rem);
+  font-weight: 900;
+  line-height: 1.0;
+  letter-spacing: -0.02em;
+  max-width: 800px;
+  margin-bottom: 1.5rem;
+}
+.hero h1 em { font-style: italic; color: var(--gold); }
+.hero-sub {
+  font-size: 1.1rem; font-weight: 300; color: #555;
+  max-width: 520px; margin-bottom: 2.5rem; line-height: 1.8;
+}
+.hero-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 3rem; }
+.tag {
+  font-size: 12px; font-weight: 500; letter-spacing: 0.05em;
+  padding: 5px 14px; border-radius: 99px;
+  border: 1px solid currentColor;
+}
+.tag-gold { color: var(--gold); border-color: var(--gold-light); background: rgba(201,168,76,0.07); }
+.tag-green { color: var(--green); border-color: #b8d4c0; background: var(--green-light); }
+.tag-rust { color: var(--rust); border-color: #e8c0b0; background: var(--rust-light); }
+.tag-blue { color: var(--blue); border-color: #b0c8e0; background: var(--blue-light); }
+.tag-purple { color: var(--purple); border-color: #c8b8e8; background: var(--purple-light); }
+.tag-teal { color: var(--teal); border-color: #b0d0cc; background: var(--teal-light); }
+.hero-stats { display: flex; gap: 3rem; }
+.stat-num { font-family: var(--serif); font-size: 2.5rem; font-weight: 700; color: var(--ink); line-height: 1; }
+.stat-label { font-size: 12px; color: #888; font-weight: 400; margin-top: 4px; }
+.hero-deco {
+  position: absolute; right: 3rem; top: 50%; transform: translateY(-50%);
+  font-family: var(--serif); font-size: 12rem; font-weight: 900; font-style: italic;
+  color: rgba(0,0,0,0.04); line-height: 1; pointer-events: none; user-select: none;
+}
+
+/* DIVIDER */
+.section-divider {
+  display: flex; align-items: center; gap: 1.5rem;
+  padding: 0 3rem; margin: 0 0 3rem;
+}
+.section-divider::after { content: ''; flex: 1; height: 1px; background: rgba(0,0,0,0.1); }
+.section-label {
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em;
+  text-transform: uppercase; color: #999; white-space: nowrap;
+}
+
+/* SECTIONS */
+section { padding: 5rem 3rem; }
+section:nth-child(even) { background: var(--cream); }
+
+.section-header { margin-bottom: 3rem; }
+.section-num { font-family: var(--mono); font-size: 11px; color: var(--gold); letter-spacing: 0.1em; display: block; margin-bottom: 0.5rem; }
+.section-title { font-family: var(--serif); font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 700; line-height: 1.15; letter-spacing: -0.02em; }
+
+/* ABOUT STRIP */
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+.about-text p { font-size: 1.05rem; font-weight: 300; line-height: 1.9; color: #444; }
+.about-text p + p { margin-top: 1rem; }
+.skills-list { list-style: none; }
+.skills-list li {
+  padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,0.07);
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 14px;
+}
+.skills-list li:last-child { border-bottom: none; }
+.skill-name { font-weight: 500; }
+.skill-bar { display: flex; gap: 4px; }
+.skill-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--cream); border: 1.5px solid #ccc; }
+.skill-dot.filled { background: var(--gold); border-color: var(--gold); }
+
+/* CASE STUDY HERO */
+.case-banner {
+  background: var(--ink); color: white;
+  padding: 3rem; border-radius: 16px; margin-bottom: 3rem;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;
+}
+.case-banner h3 { font-family: var(--serif); font-size: 1.8rem; font-weight: 700; margin-bottom: 0.75rem; }
+.case-banner p { font-size: 14px; font-weight: 300; color: rgba(255,255,255,0.7); line-height: 1.8; }
+.case-metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.metric-card {
+  background: rgba(255,255,255,0.07); border-radius: 10px; padding: 1.25rem;
+  text-align: center;
+}
+.metric-val { font-family: var(--serif); font-size: 2rem; font-weight: 700; color: var(--gold); }
+.metric-lbl { font-size: 11px; color: rgba(255,255,255,0.5); margin-top: 4px; letter-spacing: 0.06em; text-transform: uppercase; }
+
+/* SEO PILLARS */
+.pillars-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; }
+.pillar-card {
+  border-radius: 16px; padding: 2rem;
+  border: 1px solid rgba(0,0,0,0.08);
+  background: white;
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative; overflow: hidden;
+}
+.pillar-card:hover { transform: translateY(-4px); box-shadow: 0 16px 48px rgba(0,0,0,0.1); }
+.pillar-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+}
+.pillar-card.on-page::before { background: var(--gold); }
+.pillar-card.off-page::before { background: var(--green); }
+.pillar-card.technical::before { background: var(--blue); }
+.pillar-card.local::before { background: var(--rust); }
+.pillar-card.aeo::before { background: var(--purple); }
+.pillar-card.geo::before { background: var(--teal); }
+
+.pillar-icon { font-size: 2rem; margin-bottom: 1rem; }
+.pillar-title { font-family: var(--serif); font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; }
+.pillar-subtitle { font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1rem; }
+.pillar-subtitle.on-page { color: var(--gold); }
+.pillar-subtitle.off-page { color: var(--green); }
+.pillar-subtitle.technical { color: var(--blue); }
+.pillar-subtitle.local { color: var(--rust); }
+.pillar-subtitle.aeo { color: var(--purple); }
+.pillar-subtitle.geo { color: var(--teal); }
+.pillar-desc { font-size: 13.5px; font-weight: 300; color: #555; line-height: 1.8; margin-bottom: 1.25rem; }
+.pillar-tasks { list-style: none; }
+.pillar-tasks li {
+  font-size: 13px; padding: 6px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  display: flex; align-items: flex-start; gap: 8px; color: #444;
+}
+.pillar-tasks li:last-child { border-bottom: none; }
+.pillar-tasks li::before { content: '✓'; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+.on-page .pillar-tasks li::before { color: var(--gold); }
+.off-page .pillar-tasks li::before { color: var(--green); }
+.technical .pillar-tasks li::before { color: var(--blue); }
+.local .pillar-tasks li::before { color: var(--rust); }
+.aeo .pillar-tasks li::before { color: var(--purple); }
+.geo .pillar-tasks li::before { color: var(--teal); }
+
+/* RESULTS TABLE */
+.results-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.results-table th { text-align: left; font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #999; padding: 10px 16px; border-bottom: 2px solid rgba(0,0,0,0.08); }
+.results-table td { padding: 14px 16px; border-bottom: 1px solid rgba(0,0,0,0.06); vertical-align: middle; }
+.results-table tr:last-child td { border-bottom: none; }
+.results-table tr:hover td { background: rgba(0,0,0,0.02); }
+.change-up { color: var(--green); font-weight: 600; font-family: var(--mono); font-size: 13px; }
+.change-dn { color: var(--rust); font-weight: 600; font-family: var(--mono); font-size: 13px; }
+.kw-cell { font-weight: 500; font-size: 13.5px; }
+.kw-cell small { display: block; font-weight: 300; color: #999; font-size: 12px; margin-top: 2px; }
+
+/* TOOLS */
+.tools-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 1rem; }
+.tool-pill {
+  background: white; border: 1px solid rgba(0,0,0,0.08); border-radius: 10px;
+  padding: 14px 16px; text-align: center; font-size: 13px; font-weight: 500;
+  transition: all 0.15s;
+}
+.tool-pill:hover { border-color: var(--gold); color: var(--gold); }
+
+/* PORTFOLIO GRID */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.75rem;
+}
+.port-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.08);
+  transition: transform 0.25s, box-shadow 0.25s;
+  display: flex;
+  flex-direction: column;
+}
+.port-card:hover { transform: translateY(-6px); box-shadow: 0 20px 60px rgba(0,0,0,0.12); }
+.port-thumb {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  position: relative;
+  overflow: hidden;
+}
+.port-thumb-overlay {
+  position: absolute; inset: 0;
+  display: flex; align-items: flex-end;
+  padding: 1rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 70%);
+}
+.port-live-badge {
+  font-family: var(--mono);
+  font-size: 10px; letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: rgba(255,255,255,0.9);
+  color: #000;
+  padding: 4px 10px;
+  border-radius: 99px;
+  font-weight: 600;
+}
+.port-live-badge.seo { background: var(--gold); color: #000; }
+.port-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
+.port-category {
+  font-family: var(--mono);
+  font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+.port-name { font-family: var(--serif); font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem; line-height: 1.3; }
+.port-desc { font-size: 13px; font-weight: 300; color: #666; line-height: 1.8; margin-bottom: 1rem; flex: 1; }
+.port-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 1.25rem; }
+.port-tag { font-size: 11px; font-weight: 500; padding: 3px 10px; border-radius: 99px; background: var(--cream); color: #666; border: 1px solid rgba(0,0,0,0.08); }
+.port-seo-badges { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 1rem; }
+.port-seo-badge { font-size: 10px; font-weight: 600; padding: 3px 9px; border-radius: 6px; letter-spacing: 0.03em; }
+.port-footer { display: flex; align-items: center; justify-content: space-between; padding-top: 1rem; border-top: 1px solid rgba(0,0,0,0.07); }
+.port-view-btn {
+  font-size: 12px; font-weight: 600; letter-spacing: 0.04em;
+  padding: 8px 18px; border-radius: 8px;
+  text-decoration: none; transition: all 0.2s;
+  display: inline-flex; align-items: center; gap: 6px;
+}
+
+/* CASE STUDIES SECTION */
+.case-study-list { display: flex; flex-direction: column; gap: 3rem; }
+.cs-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.08);
+}
+.cs-header {
+  padding: 2rem 2.5rem;
+  display: flex; align-items: flex-start; justify-content: space-between; gap: 2rem;
+  border-bottom: 1px solid rgba(0,0,0,0.07);
+  flex-wrap: wrap;
+}
+.cs-header-left { flex: 1; min-width: 280px; }
+.cs-number {
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.12em;
+  text-transform: uppercase; margin-bottom: 0.5rem; display: block;
+}
+.cs-title { font-family: var(--serif); font-size: 1.5rem; font-weight: 700; line-height: 1.2; margin-bottom: 0.4rem; }
+.cs-url { font-family: var(--mono); font-size: 11px; color: #999; }
+.cs-url a { color: inherit; text-decoration: none; }
+.cs-url a:hover { color: var(--gold); }
+.cs-metrics-row { display: flex; gap: 1rem; flex-wrap: wrap; }
+.cs-metric { background: var(--cream); border-radius: 10px; padding: 0.75rem 1.25rem; text-align: center; min-width: 90px; }
+.cs-metric-val { font-family: var(--serif); font-size: 1.4rem; font-weight: 700; line-height: 1; }
+.cs-metric-lbl { font-size: 10px; color: #999; letter-spacing: 0.06em; text-transform: uppercase; margin-top: 3px; }
+.cs-body { padding: 2rem 2.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+.cs-body.single { grid-template-columns: 1fr; }
+.cs-section-label { font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.75rem; }
+.cs-list { list-style: none; }
+.cs-list li { font-size: 13px; padding: 7px 0; border-bottom: 1px solid rgba(0,0,0,0.05); display: flex; gap: 8px; color: #444; line-height: 1.6; }
+.cs-list li:last-child { border-bottom: none; }
+.cs-list li .cs-icon { flex-shrink: 0; font-size: 12px; margin-top: 2px; }
+.cs-footer { padding: 1.25rem 2.5rem; background: var(--cream); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+.cs-seo-pills { display: flex; gap: 6px; flex-wrap: wrap; }
+.cs-seo-pill { font-size: 10px; font-weight: 600; padding: 3px 10px; border-radius: 99px; }
+.cs-view-link {
+  font-size: 12px; font-weight: 600; letter-spacing: 0.04em;
+  padding: 8px 20px; border-radius: 8px;
+  text-decoration: none; transition: all 0.2s;
+  display: inline-flex; align-items: center; gap: 6px;
+  background: var(--ink); color: white;
+}
+.cs-view-link:hover { background: var(--gold); color: #000; }
+
+@media (max-width: 768px) {
+  .cs-body { grid-template-columns: 1fr; }
+  .cs-header { flex-direction: column; }
+  .portfolio-grid { grid-template-columns: 1fr; }
+}
+
+
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+.contact-cta { font-family: var(--serif); font-size: clamp(2rem, 3vw, 3rem); font-weight: 700; line-height: 1.2; margin-bottom: 1.5rem; }
+.contact-cta em { font-style: italic; color: var(--gold); }
+.contact-links { display: flex; flex-direction: column; gap: 1rem; }
+.contact-link {
+  display: flex; align-items: center; gap: 1rem;
+  text-decoration: none; color: var(--ink); font-size: 15px;
+  padding: 14px 20px; border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.08); background: white;
+  transition: all 0.2s;
+}
+.contact-link:hover { border-color: var(--gold); background: rgba(201,168,76,0.05); }
+.contact-link-icon { width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; }
+.contact-link span { font-weight: 500; }
+.contact-link small { display: block; font-size: 12px; font-weight: 300; color: #888; }
+
+/* FOOTER */
+footer {
+  background: var(--ink); color: rgba(255,255,255,0.5);
+  padding: 2rem 3rem;
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 12px;
+}
+footer a { color: rgba(255,255,255,0.5); text-decoration: none; }
+
+/* ANIMATIONS */
+@keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+.hero h1 { animation: fadeUp 0.8s ease both 0.1s; }
+.hero-eyebrow { animation: fadeUp 0.8s ease both 0s; }
+.hero-sub { animation: fadeUp 0.8s ease both 0.2s; }
+.hero-tags { animation: fadeUp 0.8s ease both 0.3s; }
+.hero-stats { animation: fadeUp 0.8s ease both 0.4s; }
+
+@media (max-width: 768px) {
+  nav { padding: 0 1.5rem; }
+  .nav-links { display: none; }
+  .hero { padding: 80px 1.5rem 3rem; }
+  .hero-deco { display: none; }
+  section { padding: 3rem 1.5rem; }
+  .about-grid, .contact-grid, .case-banner { grid-template-columns: 1fr; }
+  .hero-stats { gap: 2rem; }
+  .section-divider { padding: 0 1.5rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">MG — SEO</div>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#work">Case Study</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#seo">SEO Skills</a>
+    <a href="#results">Keywords</a>
+    <a href="#ai-platforms">AI Tools</a>
+    <a href="#contact">Hire Me</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-deco">SEO</div>
+  <div class="hero-eyebrow">SEO Executive Portfolio · 2025</div>
+  <h1>Memuna Gandhi<br><em>Search Engine</em><br>Optimisation</h1>
+  <p class="hero-sub">I help businesses rank higher, attract the right audience, and convert visitors into customers — through data-driven SEO across all 6 pillars.</p>
+  <div class="hero-tags">
+    <span class="tag tag-gold">On-Page SEO</span>
+    <span class="tag tag-green">Off-Page SEO</span>
+    <span class="tag tag-blue">Technical SEO</span>
+    <span class="tag tag-rust">Local SEO</span>
+    <span class="tag tag-purple">AEO</span>
+    <span class="tag tag-teal">GEO</span>
+  </div>
+  <div class="hero-stats">
+    <div>
+      <div class="stat-num">7</div>
+      <div class="stat-label">Live Projects Built</div>
+    </div>
+    <div>
+      <div class="stat-num">6</div>
+      <div class="stat-label">SEO Pillars Covered</div>
+    </div>
+    <div>
+      <div class="stat-num">1</div>
+      <div class="stat-label">Live SEO Case Study</div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-header">
+    <span class="section-num">01 / About</span>
+    <h2 class="section-title">A strategist who thinks<br>beyond rankings.</h2>
+  </div>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>I'm Memuna Gandhi, an SEO Executive based in Surat, Gujarat. I specialise in building end-to-end SEO strategies — from deep keyword research and on-page optimisation to technical audits, local search, and the newest frontiers of AI-powered search (AEO & GEO).</p>
+      <p>My live case study is <strong>Maymuna's Cafe</strong> — a premium coffee & bakery in Surat. I researched 30+ targeted keywords, mapped them to each website page, identified technical improvements, and built a complete local SEO roadmap to drive foot traffic and online visibility.</p>
+      <p>I'm actively seeking a full-time SEO Executive role where I can apply these skills to grow real businesses.</p>
+    </div>
+    <div>
+      <ul class="skills-list">
+        <li><span class="skill-name">Keyword Research</span><span class="skill-bar"><span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot filled"></span></span></li>
+        <li><span class="skill-name">On-Page Optimisation</span><span class="skill-bar"><span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot"></span></span></li>
+        <li><span class="skill-name">Technical SEO Audit</span><span class="skill-bar"><span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot"></span></span></li>
+        <li><span class="skill-name">Local SEO & GBP</span><span class="skill-bar"><span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot"></span></span></li>
+        <li><span class="skill-name">Off-Page / Link Building</span><span class="skill-bar"><span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot"></span><span class="skill-dot"></span></span></li>
+        <li><span class="skill-name">AEO (Answer Engine Opt.)</span><span class="skill-bar"><span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot"></span><span class="skill-dot"></span></span></li>
+        <li><span class="skill-name">GEO (Generative Engine Opt.)</span><span class="skill-bar"><span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot"></span><span class="skill-dot"></span><span class="skill-dot"></span></span></li>
+        <li><span class="skill-name">Google Search Console</span><span class="skill-bar"><span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot"></span></span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDY -->
+<section id="work">
+  <div class="section-header">
+    <span class="section-num">02 / Case Study</span>
+    <h2 class="section-title">Maymuna's Cafe, Surat —<br>A Full SEO Strategy.</h2>
+  </div>
+
+  <div class="case-banner">
+    <div>
+      <h3>Maymuna's Cafe</h3>
+      <p style="color:var(--gold-light);font-size:13px;margin-bottom:1rem;font-family:var(--mono);letter-spacing:0.06em">Premium Coffee & Bakery · Surat, Gujarat</p>
+      <p>A real-world SEO project where I analysed the live website at <em>memunagandhi.github.io/cafe-website</em>, conducted full keyword research across 5 categories, mapped every keyword to a specific page, identified on-page gaps, and built a complete technical + local SEO action plan.</p>
+    </div>
+    <div class="case-metrics">
+      <div class="metric-card"><div class="metric-val">30+</div><div class="metric-lbl">Keywords Mapped</div></div>
+      <div class="metric-card"><div class="metric-val">5</div><div class="metric-lbl">Page Strategies</div></div>
+      <div class="metric-card"><div class="metric-val">6</div><div class="metric-lbl">SEO Pillars</div></div>
+      <div class="metric-card"><div class="metric-val">Low</div><div class="metric-lbl">Brand KW Difficulty</div></div>
+      <div class="metric-card"><div class="metric-val">14.8K</div><div class="metric-lbl">Top KW Volume</div></div>
+      <div class="metric-card"><div class="metric-val">★5</div><div class="metric-lbl">Priority KWs Found</div></div>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:1.5rem">
+    <div style="background:white;border-radius:16px;padding:2rem;border:1px solid rgba(0,0,0,0.08)">
+      <div style="font-family:var(--mono);font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--rust);margin-bottom:1rem">Problems Identified</div>
+      <ul style="list-style:none;font-size:13.5px;color:#444">
+        <li style="padding:8px 0;border-bottom:1px solid rgba(0,0,0,0.05);display:flex;gap:8px"><span style="color:var(--rust)">✕</span> H1 tag has no keyword value ("Experience Coffee Redefined")</li>
+        <li style="padding:8px 0;border-bottom:1px solid rgba(0,0,0,0.05);display:flex;gap:8px"><span style="color:var(--rust)">✕</span> No Google Business Profile connected</li>
+        <li style="padding:8px 0;border-bottom:1px solid rgba(0,0,0,0.05);display:flex;gap:8px"><span style="color:var(--rust)">✕</span> Menu items lack SEO descriptions</li>
+        <li style="padding:8px 0;border-bottom:1px solid rgba(0,0,0,0.05);display:flex;gap:8px"><span style="color:var(--rust)">✕</span> Images have no alt text</li>
+        <li style="padding:8px 0;border-bottom:1px solid rgba(0,0,0,0.05);display:flex;gap:8px"><span style="color:var(--rust)">✕</span> No Schema.org structured data (LocalBusiness, Menu)</li>
+        <li style="padding:8px 0;display:flex;gap:8px"><span style="color:var(--rust)">✕</span> No backlinks or citations from local directories</li>
+      </ul>
+    </div>
+    <div style="background:white;border-radius:16px;padding:2rem;border:1px solid rgba(0,0,0,0.08)">
+      <div style="font-family:var(--mono);font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--green);margin-bottom:1rem">Solutions Recommended</div>
+      <ul style="list-style:none;font-size:13.5px;color:#444">
+        <li style="padding:8px 0;border-bottom:1px solid rgba(0,0,0,0.05);display:flex;gap:8px"><span style="color:var(--green)">✓</span> Rewrite H1 to "Best Cafe in Surat | Maymuna's Cafe"</li>
+        <li style="padding:8px 0;border-bottom:1px solid rgba(0,0,0,0.05);display:flex;gap:8px"><span style="color:var(--green)">✓</span> Set up & optimise GBP with photos, hours, address</li>
+        <li style="padding:8px 0;border-bottom:1px solid rgba(0,0,0,0.05);display:flex;gap:8px"><span style="color:var(--green)">✓</span> Add 50-word keyword-rich descriptions to each menu item</li>
+        <li style="padding:8px 0;border-bottom:1px solid rgba(0,0,0,0.05);display:flex;gap:8px"><span style="color:var(--green)">✓</span> Add descriptive alt text to all images with location keywords</li>
+        <li style="padding:8px 0;border-bottom:1px solid rgba(0,0,0,0.05);display:flex;gap:8px"><span style="color:var(--green)">✓</span> Implement LocalBusiness + Menu schema on all pages</li>
+        <li style="padding:8px 0;display:flex;gap:8px"><span style="color:var(--green)">✓</span> Submit to JustDial, Sulekha, Google Maps, Zomato</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO GRID -->
+<section id="portfolio" style="background:var(--cream)">
+  <div class="section-header">
+    <span class="section-num">02b / My Work</span>
+    <h2 class="section-title">7 live projects —<br>every one built from scratch.</h2>
+    <p style="font-size:14px;font-weight:300;color:#666;margin-top:0.75rem;max-width:560px;line-height:1.8">From fitness studios and dental clinics to fashion brands and an SEO business website — each project demonstrates a different niche, design challenge, and SEO strategy.</p>
+  </div>
+
+  <div class="portfolio-grid">
+
+    <!-- PROJECT 1: Fitness Studio -->
+    <div class="port-card">
+      <div class="port-thumb" style="background:linear-gradient(135deg,#1a2a1a 0%,#2d5a3d 60%,#4a8a5a 100%)">
+        <span>🏋️</span>
+        <div class="port-thumb-overlay">
+          <span class="port-live-badge">● Live</span>
+        </div>
+      </div>
+      <div class="port-body">
+        <div class="port-category" style="color:var(--green)">Fitness & Wellness</div>
+        <div class="port-name">Fitness Studio</div>
+        <div class="port-desc">A high-energy fitness studio website with class schedules, membership plans, trainer profiles, and strong local SEO signals for gym-related search terms.</div>
+        <div class="port-tags">
+          <span class="port-tag">HTML/CSS</span>
+          <span class="port-tag">Local SEO</span>
+          <span class="port-tag">Mobile-First</span>
+          <span class="port-tag">On-Page SEO</span>
+        </div>
+        <div class="port-seo-badges">
+          <span class="port-seo-badge" style="background:var(--green-light);color:var(--green)">Local SEO</span>
+          <span class="port-seo-badge" style="background:#e8f5e9;color:#2e7d32">On-Page</span>
+          <span class="port-seo-badge" style="background:#fff3e0;color:#e65100">Schema Ready</span>
+        </div>
+        <div class="port-footer">
+          <span style="font-size:11px;color:#999;font-family:var(--mono)">fitness-studio</span>
+          <a href="https://memunagandhi.github.io/Fitness_studio/" target="_blank" class="port-view-btn" style="background:var(--green);color:white">View Live →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT 2: Luminary -->
+    <div class="port-card">
+      <div class="port-thumb" style="background:linear-gradient(135deg,#2a1a3a 0%,#4a2d7a 60%,#7a5aaa 100%)">
+        <span>✨</span>
+        <div class="port-thumb-overlay">
+          <span class="port-live-badge">● Live</span>
+        </div>
+      </div>
+      <div class="port-body">
+        <div class="port-category" style="color:var(--purple)">Lifestyle / Brand</div>
+        <div class="port-name">Luminary</div>
+        <div class="port-desc">A premium lifestyle brand website with elegant design, keyword-optimised product copy, and content structured for both users and search engines.</div>
+        <div class="port-tags">
+          <span class="port-tag">HTML/CSS</span>
+          <span class="port-tag">E-Commerce SEO</span>
+          <span class="port-tag">Content Strategy</span>
+          <span class="port-tag">UI Design</span>
+        </div>
+        <div class="port-seo-badges">
+          <span class="port-seo-badge" style="background:var(--purple-light);color:var(--purple)">On-Page SEO</span>
+          <span class="port-seo-badge" style="background:#f3e5f5;color:#6a1b9a">E-Commerce</span>
+          <span class="port-seo-badge" style="background:#e8eaf6;color:#283593">AEO</span>
+        </div>
+        <div class="port-footer">
+          <span style="font-size:11px;color:#999;font-family:var(--mono)">luminary</span>
+          <a href="https://memunagandhi.github.io/Luminary/" target="_blank" class="port-view-btn" style="background:var(--purple);color:white">View Live →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT 3: Dentist Website -->
+    <div class="port-card">
+      <div class="port-thumb" style="background:linear-gradient(135deg,#0d2a3a 0%,#1a3a5c 60%,#2a6a9c 100%)">
+        <span>🦷</span>
+        <div class="port-thumb-overlay">
+          <span class="port-live-badge">● Live</span>
+        </div>
+      </div>
+      <div class="port-body">
+        <div class="port-category" style="color:var(--blue)">Healthcare / Medical</div>
+        <div class="port-name">Dentist Website</div>
+        <div class="port-desc">A trust-focused dental clinic website with service pages, patient FAQs, appointment CTAs, and healthcare-specific SEO including LocalBusiness + MedicalBusiness schema.</div>
+        <div class="port-tags">
+          <span class="port-tag">HTML/CSS</span>
+          <span class="port-tag">Healthcare SEO</span>
+          <span class="port-tag">Schema Markup</span>
+          <span class="port-tag">Local SEO</span>
+        </div>
+        <div class="port-seo-badges">
+          <span class="port-seo-badge" style="background:var(--blue-light);color:var(--blue)">Local SEO</span>
+          <span class="port-seo-badge" style="background:#e3f2fd;color:#1565c0">E-E-A-T</span>
+          <span class="port-seo-badge" style="background:#e8f5e9;color:#2e7d32">Schema</span>
+        </div>
+        <div class="port-footer">
+          <span style="font-size:11px;color:#999;font-family:var(--mono)">dentist-website</span>
+          <a href="https://memunagandhi.github.io/dentist-website/" target="_blank" class="port-view-btn" style="background:var(--blue);color:white">View Live →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT 4: Aura Academy -->
+    <div class="port-card">
+      <div class="port-thumb" style="background:linear-gradient(135deg,#3a1a0d 0%,#b5451b 60%,#e07050 100%)">
+        <span>🎓</span>
+        <div class="port-thumb-overlay">
+          <span class="port-live-badge">● Live</span>
+        </div>
+      </div>
+      <div class="port-body">
+        <div class="port-category" style="color:var(--rust)">Education / Academy</div>
+        <div class="port-name">Aura Academy</div>
+        <div class="port-desc">An educational academy website with course listings, instructor bios, testimonials, and SEO content targeting learning and training keywords in the local market.</div>
+        <div class="port-tags">
+          <span class="port-tag">HTML/CSS</span>
+          <span class="port-tag">Education SEO</span>
+          <span class="port-tag">On-Page SEO</span>
+          <span class="port-tag">Conversion</span>
+        </div>
+        <div class="port-seo-badges">
+          <span class="port-seo-badge" style="background:var(--rust-light);color:var(--rust)">On-Page</span>
+          <span class="port-seo-badge" style="background:#fbe9e7;color:#bf360c">Local SEO</span>
+          <span class="port-seo-badge" style="background:#fff8e1;color:#f57f17">Content</span>
+        </div>
+        <div class="port-footer">
+          <span style="font-size:11px;color:#999;font-family:var(--mono)">aura-academy</span>
+          <a href="https://memunagandhi.github.io/aura-academy/" target="_blank" class="port-view-btn" style="background:var(--rust);color:white">View Live →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT 5: MG Fashion -->
+    <div class="port-card">
+      <div class="port-thumb" style="background:linear-gradient(135deg,#1a1a2a 0%,#2a2a4a 60%,#c9a84c 100%)">
+        <span>👗</span>
+        <div class="port-thumb-overlay">
+          <span class="port-live-badge">● Live</span>
+        </div>
+      </div>
+      <div class="port-body">
+        <div class="port-category" style="color:var(--gold)">Fashion / E-Commerce</div>
+        <div class="port-name">MG Fashion</div>
+        <div class="port-desc">A fashion brand website with product showcases, category pages optimised for shopping keywords, and brand storytelling designed to improve search visibility.</div>
+        <div class="port-tags">
+          <span class="port-tag">HTML/CSS</span>
+          <span class="port-tag">Fashion SEO</span>
+          <span class="port-tag">Product Pages</span>
+          <span class="port-tag">Brand SEO</span>
+        </div>
+        <div class="port-seo-badges">
+          <span class="port-seo-badge" style="background:rgba(201,168,76,0.15);color:#8a6a00">On-Page SEO</span>
+          <span class="port-seo-badge" style="background:rgba(201,168,76,0.1);color:#8a6a00">E-Commerce</span>
+          <span class="port-seo-badge" style="background:#f5f5f5;color:#555">GEO</span>
+        </div>
+        <div class="port-footer">
+          <span style="font-size:11px;color:#999;font-family:var(--mono)">mg-fashion</span>
+          <a href="https://memunagandhi.github.io/MG-fashion-/" target="_blank" class="port-view-btn" style="background:var(--gold);color:#000">View Live →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT 6: Silvermoon Fitness -->
+    <div class="port-card">
+      <div class="port-thumb" style="background:linear-gradient(135deg,#0d1a2a 0%,#1a3a5c 55%,#c0c8d8 100%)">
+        <span>🌙</span>
+        <div class="port-thumb-overlay">
+          <span class="port-live-badge">● Live · Netlify</span>
+        </div>
+      </div>
+      <div class="port-body">
+        <div class="port-category" style="color:var(--teal)">Fitness / Wellness</div>
+        <div class="port-name">Silvermoon Fitness</div>
+        <div class="port-desc">A premium fitness brand deployed on Netlify — featuring programme pages, booking CTAs, trainer showcases, and a full local SEO setup targeting fitness keywords.</div>
+        <div class="port-tags">
+          <span class="port-tag">Netlify Hosted</span>
+          <span class="port-tag">Local SEO</span>
+          <span class="port-tag">Technical SEO</span>
+          <span class="port-tag">Performance</span>
+        </div>
+        <div class="port-seo-badges">
+          <span class="port-seo-badge" style="background:var(--teal-light);color:var(--teal)">Technical SEO</span>
+          <span class="port-seo-badge" style="background:#e0f7fa;color:#00695c">Local SEO</span>
+          <span class="port-seo-badge" style="background:#e8eaf6;color:#283593">Schema</span>
+        </div>
+        <div class="port-footer">
+          <span style="font-size:11px;color:#999;font-family:var(--mono)">silvermoon-fitness</span>
+          <a href="https://silvermoon-fitness.netlify.app/" target="_blank" class="port-view-btn" style="background:var(--teal);color:white">View Live →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT 7: MGWix - Live SEO Site -->
+    <div class="port-card" style="border:2px solid var(--gold)">
+      <div class="port-thumb" style="background:linear-gradient(135deg,#0d0d0d 0%,#1a1a1a 60%,#3a3010 100%)">
+        <span>🌐</span>
+        <div class="port-thumb-overlay">
+          <span class="port-live-badge seo">★ Live SEO Project</span>
+        </div>
+      </div>
+      <div class="port-body">
+        <div class="port-category" style="color:var(--gold)">SEO Business · Live Domain</div>
+        <div class="port-name">MGWix — Live SEO Website</div>
+        <div class="port-desc">My flagship live SEO project on a custom domain (mgwix.online) — fully optimised with all 6 SEO pillars, Google Search Console connected, and actively tracked for real keyword rankings.</div>
+        <div class="port-tags">
+          <span class="port-tag">Custom Domain</span>
+          <span class="port-tag">All 6 Pillars</span>
+          <span class="port-tag">GSC Connected</span>
+          <span class="port-tag">Live Rankings</span>
+        </div>
+        <div class="port-seo-badges">
+          <span class="port-seo-badge" style="background:rgba(201,168,76,0.15);color:#8a6a00">Full SEO Audit</span>
+          <span class="port-seo-badge" style="background:#e8f5e9;color:#2e7d32">Technical SEO</span>
+          <span class="port-seo-badge" style="background:#fff3e0;color:#e65100">AEO + GEO</span>
+        </div>
+        <div class="port-footer">
+          <span style="font-size:11px;color:#999;font-family:var(--mono)">mgwix.online</span>
+          <a href="https://mgwix.online/" target="_blank" class="port-view-btn" style="background:var(--gold);color:#000">Visit Live Site →</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CASE STUDIES -->
+<section id="case-studies">
+  <div class="section-header">
+    <span class="section-num">02c / Case Studies</span>
+    <h2 class="section-title">Real projects.<br>Real SEO strategy applied.</h2>
+    <p style="font-size:14px;font-weight:300;color:#666;margin-top:0.75rem;max-width:580px;line-height:1.8">Each project below includes the SEO problems identified, the strategy applied, and the key optimisations delivered across each of the 6 SEO pillars.</p>
+  </div>
+
+  <div class="case-study-list">
+
+    <!-- CASE STUDY: Fitness Studio -->
+    <div class="cs-card">
+      <div class="cs-header">
+        <div class="cs-header-left">
+          <span class="cs-number" style="color:var(--green)">Case Study 01 · Fitness</span>
+          <div class="cs-title">Fitness Studio</div>
+          <div class="cs-url"><a href="https://memunagandhi.github.io/Fitness_studio/" target="_blank">memunagandhi.github.io/Fitness_studio/ ↗</a></div>
+        </div>
+        <div class="cs-metrics-row">
+          <div class="cs-metric"><div class="cs-metric-val" style="color:var(--green)">5+</div><div class="cs-metric-lbl">Pages Built</div></div>
+          <div class="cs-metric"><div class="cs-metric-val" style="color:var(--green)">Local</div><div class="cs-metric-lbl">SEO Focus</div></div>
+          <div class="cs-metric"><div class="cs-metric-val" style="color:var(--green)">3</div><div class="cs-metric-lbl">Schema Types</div></div>
+        </div>
+      </div>
+      <div class="cs-body">
+        <div>
+          <div class="cs-section-label" style="color:var(--rust)">❌ SEO Problems Identified</div>
+          <ul class="cs-list">
+            <li><span class="cs-icon">✕</span> No geo-targeted keywords in H1 or page titles (missing "Surat" / city signals)</li>
+            <li><span class="cs-icon">✕</span> Missing LocalBusiness + SportsActivityLocation schema</li>
+            <li><span class="cs-icon">✕</span> Class schedule pages had thin content — under 200 words each</li>
+            <li><span class="cs-icon">✕</span> No Google Business Profile optimisation or Maps embed</li>
+            <li><span class="cs-icon">✕</span> Trainer profile pages lacked person schema and keyword-rich bios</li>
+          </ul>
+        </div>
+        <div>
+          <div class="cs-section-label" style="color:var(--green)">✅ SEO Strategy Applied</div>
+          <ul class="cs-list">
+            <li><span class="cs-icon">✓</span> Rewrote H1 to target "best fitness studio in [city]" with geo modifier</li>
+            <li><span class="cs-icon">✓</span> Added SportsActivityLocation schema with full NAP, hours, geo coords</li>
+            <li><span class="cs-icon">✓</span> Expanded each class page to 300+ words with intent-matched keywords</li>
+            <li><span class="cs-icon">✓</span> Embedded Google Maps, added structured address markup on contact page</li>
+            <li><span class="cs-icon">✓</span> Added FAQ section targeting "gym near me" and "fitness classes" queries</li>
+            <li><span class="cs-icon">✓</span> Optimised all images with descriptive alt text including location keywords</li>
+          </ul>
+        </div>
+      </div>
+      <div class="cs-footer">
+        <div class="cs-seo-pills">
+          <span class="cs-seo-pill" style="background:var(--green-light);color:var(--green)">On-Page ✓</span>
+          <span class="cs-seo-pill" style="background:var(--rust-light);color:var(--rust)">Local SEO ✓</span>
+          <span class="cs-seo-pill" style="background:var(--blue-light);color:var(--blue)">Technical ✓</span>
+          <span class="cs-seo-pill" style="background:var(--purple-light);color:var(--purple)">AEO ✓</span>
+        </div>
+        <a href="https://memunagandhi.github.io/Fitness_studio/" target="_blank" class="cs-view-link">View Project →</a>
+      </div>
+    </div>
+
+    <!-- CASE STUDY: Luminary -->
+    <div class="cs-card">
+      <div class="cs-header">
+        <div class="cs-header-left">
+          <span class="cs-number" style="color:var(--purple)">Case Study 02 · Lifestyle Brand</span>
+          <div class="cs-title">Luminary</div>
+          <div class="cs-url"><a href="https://memunagandhi.github.io/Luminary/" target="_blank">memunagandhi.github.io/Luminary/ ↗</a></div>
+        </div>
+        <div class="cs-metrics-row">
+          <div class="cs-metric"><div class="cs-metric-val" style="color:var(--purple)">Brand</div><div class="cs-metric-lbl">SEO Focus</div></div>
+          <div class="cs-metric"><div class="cs-metric-val" style="color:var(--purple)">E-E-A-T</div><div class="cs-metric-lbl">Strategy</div></div>
+          <div class="cs-metric"><div class="cs-metric-val" style="color:var(--purple)">AEO</div><div class="cs-metric-lbl">Applied</div></div>
+        </div>
+      </div>
+      <div class="cs-body">
+        <div>
+          <div class="cs-section-label" style="color:var(--rust)">❌ SEO Problems Identified</div>
+          <ul class="cs-list">
+            <li><span class="cs-icon">✕</span> Brand pages had zero keyword strategy — purely aesthetic copy</li>
+            <li><span class="cs-icon">✕</span> Product/service descriptions too vague — no transactional keywords</li>
+            <li><span class="cs-icon">✕</span> No structured data to communicate brand entity to search engines</li>
+            <li><span class="cs-icon">✕</span> About page lacked E-E-A-T signals (no credentials, expertise indicators)</li>
+            <li><span class="cs-icon">✕</span> No internal linking between service and product pages</li>
+          </ul>
+        </div>
+        <div>
+          <div class="cs-section-label" style="color:var(--green)">✅ SEO Strategy Applied</div>
+          <ul class="cs-list">
+            <li><span class="cs-icon">✓</span> Conducted brand + commercial keyword research; mapped to each page</li>
+            <li><span class="cs-icon">✓</span> Rewrote product copy with benefit-led, keyword-rich descriptions (50–80 words each)</li>
+            <li><span class="cs-icon">✓</span> Added Organisation + Product schema for brand entity recognition</li>
+            <li><span class="cs-icon">✓</span> Rebuilt About page with founder story, credentials, and trust signals</li>
+            <li><span class="cs-icon">✓</span> Created logical internal linking map connecting all content pages</li>
+            <li><span class="cs-icon">✓</span> Implemented FAQ schema targeting "what is Luminary" discovery queries</li>
+          </ul>
+        </div>
+      </div>
+      <div class="cs-footer">
+        <div class="cs-seo-pills">
+          <span class="cs-seo-pill" style="background:var(--purple-light);color:var(--purple)">On-Page ✓</span>
+          <span class="cs-seo-pill" style="background:var(--teal-light);color:var(--teal)">GEO ✓</span>
+          <span class="cs-seo-pill" style="background:var(--cream);color:#666">Off-Page ✓</span>
+          <span class="cs-seo-pill" style="background:var(--blue-light);color:var(--blue)">AEO ✓</span>
+        </div>
+        <a href="https://memunagandhi.github.io/Luminary/" target="_blank" class="cs-view-link">View Project →</a>
+      </div>
+    </div>
+
+    <!-- CASE STUDY: Dentist -->
+    <div class="cs-card">
+      <div class="cs-header">
+        <div class="cs-header-left">
+          <span class="cs-number" style="color:var(--blue)">Case Study 03 · Healthcare</span>
+          <div class="cs-title">Dentist Website</div>
+          <div class="cs-url"><a href="https://memunagandhi.github.io/dentist-website/" target="_blank">memunagandhi.github.io/dentist-website/ ↗</a></div>
+        </div>
+        <div class="cs-metrics-row">
+          <div class="cs-metric"><div class="cs-metric-val" style="color:var(--blue)">YMYL</div><div class="cs-metric-lbl">Content Type</div></div>
+          <div class="cs-metric"><div class="cs-metric-val" style="color:var(--blue)">High</div><div class="cs-metric-lbl">E-E-A-T Need</div></div>
+          <div class="cs-metric"><div class="cs-metric-val" style="color:var(--blue)">4</div><div class="cs-metric-lbl">Schema Types</div></div>
+        </div>
+      </div>
+      <div class="cs-body">
+        <div>
+          <div class="cs-section-label" style="color:var(--rust)">❌ SEO Problems Identified</div>
+          <ul class="cs-list">
+            <li><span class="cs-icon">✕</span> Healthcare = YMYL (Your Money Your Life) — Google requires high E-E-A-T; none present</li>
+            <li><span class="cs-icon">✕</span> No MedicalBusiness or Dentist schema markup on any page</li>
+            <li><span class="cs-icon">✕</span> Service pages ("teeth whitening", "braces") had no keyword targeting</li>
+            <li><span class="cs-icon">✕</span> No patient FAQs — missing huge AEO opportunity for dental queries</li>
+            <li><span class="cs-icon">✕</span> Appointment page lacked local keywords and trust signals</li>
+          </ul>
+        </div>
+        <div>
+          <div class="cs-section-label" style="color:var(--green)">✅ SEO Strategy Applied</div>
+          <ul class="cs-list">
+            <li><span class="cs-icon">✓</span> Added Dentist + MedicalBusiness schema with qualifications and registration</li>
+            <li><span class="cs-icon">✓</span> Rewrote each service page targeting "teeth whitening in [city]" style keywords</li>
+            <li><span class="cs-icon">✓</span> Added doctor credentials, clinic accreditations, and patient testimonials for E-E-A-T</li>
+            <li><span class="cs-icon">✓</span> Created 10-question FAQ section optimised for "People Also Ask" dental queries</li>
+            <li><span class="cs-icon">✓</span> Added local landmark references and geo-keywords on appointment page</li>
+            <li><span class="cs-icon">✓</span> Embedded Google Maps + consistent NAP across all pages</li>
+          </ul>
+        </div>
+      </div>
+      <div class="cs-footer">
+        <div class="cs-seo-pills">
+          <span class="cs-seo-pill" style="background:var(--blue-light);color:var(--blue)">Technical ✓</span>
+          <span class="cs-seo-pill" style="background:var(--rust-light);color:var(--rust)">Local SEO ✓</span>
+          <span class="cs-seo-pill" style="background:var(--green-light);color:var(--green)">E-E-A-T ✓</span>
+          <span class="cs-seo-pill" style="background:var(--purple-light);color:var(--purple)">AEO ✓</span>
+        </div>
+        <a href="https://memunagandhi.github.io/dentist-website/" target="_blank" class="cs-view-link">View Project →</a>
+      </div>
+    </div>
+
+    <!-- CASE STUDY: Aura Academy -->
+    <div class="cs-card">
+      <div class="cs-header">
+        <div class="cs-header-left">
+          <span class="cs-number" style="color:var(--rust)">Case Study 04 · Education</span>
+          <div class="cs-title">Aura Academy</div>
+          <div class="cs-url"><a href="https://memunagandhi.github.io/aura-academy/" target="_blank">memunagandhi.github.io/aura-academy/ ↗</a></div>
+        </div>
+        <div class="cs-metrics-row">
+          <div class="cs-metric"><div class="cs-metric-val" style="color:var(--rust)">Edu</div><div class="cs-metric-lbl">Niche</div></div>
+          <div class="cs-metric"><div class="cs-metric-val" style="color:var(--rust)">Course</div><div class="cs-metric-lbl">Schema</div></div>
+          <div class="cs-metric"><div class="cs-metric-val" style="color:var(--rust)">Local</div><div class="cs-metric-lbl">+ National</div></div>
+        </div>
+      </div>
+      <div class="cs-body">
+        <div>
+          <div class="cs-section-label" style="color:var(--rust)">❌ SEO Problems Identified</div>
+          <ul class="cs-list">
+            <li><span class="cs-icon">✕</span> Course pages had no EducationalOrganisation or Course schema</li>
+            <li><span class="cs-icon">✕</span> No keyword mapping for "online courses", "classes near me" terms</li>
+            <li><span class="cs-icon">✕</span> Instructor/trainer pages lacked Person schema and authority signals</li>
+            <li><span class="cs-icon">✕</span> No student testimonial content optimised for review schema</li>
+            <li><span class="cs-icon">✕</span> CTA buttons had no conversion-focused keyword alignment</li>
+          </ul>
+        </div>
+        <div>
+          <div class="cs-section-label" style="color:var(--green)">✅ SEO Strategy Applied</div>
+          <ul class="cs-list">
+            <li><span class="cs-icon">✓</span> Added EducationalOrganisation + Course schema on all programme pages</li>
+            <li><span class="cs-icon">✓</span> Keyword research targeting "academy in [city]" + subject-based terms</li>
+            <li><span class="cs-icon">✓</span> Created instructor bios with Person schema, credentials, and social links</li>
+            <li><span class="cs-icon">✓</span> Added AggregateRating schema pulling from student testimonials</li>
+            <li><span class="cs-icon">✓</span> Rewrote CTA copy to target high-intent phrases ("enrol today", "free demo class")</li>
+            <li><span class="cs-icon">✓</span> Built FAQ schema page for "People Also Ask" education queries</li>
+          </ul>
+        </div>
+      </div>
+      <div class="cs-footer">
+        <div class="cs-seo-pills">
+          <span class="cs-seo-pill" style="background:var(--rust-light);color:var(--rust)">On-Page ✓</span>
+          <span class="cs-seo-pill" style="background:var(--blue-light);color:var(--blue)">Schema ✓</span>
+          <span class="cs-seo-pill" style="background:var(--purple-light);color:var(--purple)">AEO ✓</span>
+          <span class="cs-seo-pill" style="background:var(--cream);color:#666">Local ✓</span>
+        </div>
+        <a href="https://memunagandhi.github.io/aura-academy/" target="_blank" class="cs-view-link">View Project →</a>
+      </div>
+    </div>
+
+    <!-- CASE STUDY: MG Fashion -->
+    <div class="cs-card">
+      <div class="cs-header">
+        <div class="cs-header-left">
+          <span class="cs-number" style="color:var(--gold)">Case Study 05 · Fashion / E-Commerce</span>
+          <div class="cs-title">MG Fashion</div>
+          <div class="cs-url"><a href="https://memunagandhi.github.io/MG-fashion-/" target="_blank">memunagandhi.github.io/MG-fashion-/ ↗</a></div>
+        </div>
+        <div class="cs-metrics-row">
+          <div class="cs-metric"><div class="cs-metric-val" style="color:var(--gold)">Shop</div><div class="cs-metric-lbl">Intent Target</div></div>
+          <div class="cs-metric"><div class="cs-metric-val" style="color:var(--gold)">Brand</div><div class="cs-metric-lbl">SEO Focus</div></div>
+          <div class="cs-metric"><div class="cs-metric-val" style="color:var(--gold)">GEO</div><div class="cs-metric-lbl">Applied</div></div>
+        </div>
+      </div>
+      <div class="cs-body">
+        <div>
+          <div class="cs-section-label" style="color:var(--rust)">❌ SEO Problems Identified</div>
+          <ul class="cs-list">
+            <li><span class="cs-icon">✕</span> Product pages had no structured Product schema or price markup</li>
+            <li><span class="cs-icon">✕</span> Category pages lacked keyword-optimised H1 and meta descriptions</li>
+            <li><span class="cs-icon">✕</span> No brand entity signals — Google couldn't identify the brand clearly</li>
+            <li><span class="cs-icon">✕</span> Image filenames were generic (IMG001.jpg) — missing alt text keyword opportunity</li>
+            <li><span class="cs-icon">✕</span> No blog or content strategy to attract fashion discovery traffic</li>
+          </ul>
+        </div>
+        <div>
+          <div class="cs-section-label" style="color:var(--green)">✅ SEO Strategy Applied</div>
+          <ul class="cs-list">
+            <li><span class="cs-icon">✓</span> Added Product + BreadcrumbList schema on all product/category pages</li>
+            <li><span class="cs-icon">✓</span> Keyword research for fashion terms: "ethnic wear", "kurta sets online" etc.</li>
+            <li><span class="cs-icon">✓</span> Built brand identity page with Organisation schema and consistent NAP</li>
+            <li><span class="cs-icon">✓</span> Renamed all images descriptively and added keyword-rich alt text</li>
+            <li><span class="cs-icon">✓</span> Proposed blog content calendar targeting "fashion for [occasion]" keywords</li>
+            <li><span class="cs-icon">✓</span> Added OpenGraph and Twitter Card meta for social SEO signals</li>
+          </ul>
+        </div>
+      </div>
+      <div class="cs-footer">
+        <div class="cs-seo-pills">
+          <span class="cs-seo-pill" style="background:rgba(201,168,76,0.15);color:#8a6a00">On-Page ✓</span>
+          <span class="cs-seo-pill" style="background:var(--teal-light);color:var(--teal)">GEO ✓</span>
+          <span class="cs-seo-pill" style="background:var(--blue-light);color:var(--blue)">Technical ✓</span>
+          <span class="cs-seo-pill" style="background:var(--green-light);color:var(--green)">Schema ✓</span>
+        </div>
+        <a href="https://memunagandhi.github.io/MG-fashion-/" target="_blank" class="cs-view-link">View Project →</a>
+      </div>
+    </div>
+
+    <!-- CASE STUDY: Silvermoon Fitness -->
+    <div class="cs-card">
+      <div class="cs-header">
+        <div class="cs-header-left">
+          <span class="cs-number" style="color:var(--teal)">Case Study 06 · Fitness (Netlify)</span>
+          <div class="cs-title">Silvermoon Fitness</div>
+          <div class="cs-url"><a href="https://silvermoon-fitness.netlify.app/" target="_blank">silvermoon-fitness.netlify.app ↗</a></div>
+        </div>
+        <div class="cs-metrics-row">
+          <div class="cs-metric"><div class="cs-metric-val" style="color:var(--teal)">Netlify</div><div class="cs-metric-lbl">Deployment</div></div>
+          <div class="cs-metric"><div class="cs-metric-val" style="color:var(--teal)">Speed</div><div class="cs-metric-lbl">Core Web Vitals</div></div>
+          <div class="cs-metric"><div class="cs-metric-val" style="color:var(--teal)">Full</div><div class="cs-metric-lbl">SEO Audit</div></div>
+        </div>
+      </div>
+      <div class="cs-body">
+        <div>
+          <div class="cs-section-label" style="color:var(--rust)">❌ SEO Problems Identified</div>
+          <ul class="cs-list">
+            <li><span class="cs-icon">✕</span> No robots.txt or XML sitemap submitted to search engines</li>
+            <li><span class="cs-icon">✕</span> Large uncompressed hero images causing slow LCP (Largest Contentful Paint)</li>
+            <li><span class="cs-icon">✕</span> Missing canonical tags — risk of duplicate content issues</li>
+            <li><span class="cs-icon">✕</span> Programme pages had no keyword targeting for fitness-related searches</li>
+            <li><span class="cs-icon">✕</span> No local signals — brand could rank nationally but not locally</li>
+          </ul>
+        </div>
+        <div>
+          <div class="cs-section-label" style="color:var(--green)">✅ SEO Strategy Applied</div>
+          <ul class="cs-list">
+            <li><span class="cs-icon">✓</span> Created and submitted XML sitemap via Netlify + Google Search Console</li>
+            <li><span class="cs-icon">✓</span> Compressed all hero/banner images — improved LCP score significantly</li>
+            <li><span class="cs-icon">✓</span> Added canonical tags to all pages preventing duplicate indexing</li>
+            <li><span class="cs-icon">✓</span> Added SportsActivityLocation schema with full geo and hours data</li>
+            <li><span class="cs-icon">✓</span> Rewrote page titles and meta descriptions with target local keywords</li>
+            <li><span class="cs-icon">✓</span> Configured Netlify _redirects file to handle 301 redirects cleanly</li>
+          </ul>
+        </div>
+      </div>
+      <div class="cs-footer">
+        <div class="cs-seo-pills">
+          <span class="cs-seo-pill" style="background:var(--teal-light);color:var(--teal)">Technical ✓</span>
+          <span class="cs-seo-pill" style="background:var(--rust-light);color:var(--rust)">Local SEO ✓</span>
+          <span class="cs-seo-pill" style="background:var(--blue-light);color:var(--blue)">Core Web Vitals ✓</span>
+          <span class="cs-seo-pill" style="background:var(--green-light);color:var(--green)">On-Page ✓</span>
+        </div>
+        <a href="https://silvermoon-fitness.netlify.app/" target="_blank" class="cs-view-link">View Project →</a>
+      </div>
+    </div>
+
+    <!-- CASE STUDY: MGWix - FLAGSHIP -->
+    <div class="cs-card" style="border:2px solid var(--gold)">
+      <div class="cs-header" style="background:var(--ink);color:white">
+        <div class="cs-header-left">
+          <span class="cs-number" style="color:var(--gold)">★ Flagship SEO Project — Live Custom Domain</span>
+          <div class="cs-title" style="color:white">MGWix — mgwix.online</div>
+          <div class="cs-url" style="color:rgba(255,255,255,0.5)"><a href="https://mgwix.online/" target="_blank" style="color:var(--gold)">mgwix.online ↗</a></div>
+        </div>
+        <div class="cs-metrics-row">
+          <div class="cs-metric" style="background:rgba(255,255,255,0.08)"><div class="cs-metric-val" style="color:var(--gold)">6/6</div><div class="cs-metric-lbl" style="color:rgba(255,255,255,0.5)">SEO Pillars</div></div>
+          <div class="cs-metric" style="background:rgba(255,255,255,0.08)"><div class="cs-metric-val" style="color:var(--gold)">Live</div><div class="cs-metric-lbl" style="color:rgba(255,255,255,0.5)">Domain</div></div>
+          <div class="cs-metric" style="background:rgba(255,255,255,0.08)"><div class="cs-metric-val" style="color:var(--gold)">GSC</div><div class="cs-metric-lbl" style="color:rgba(255,255,255,0.5)">Connected</div></div>
+        </div>
+      </div>
+      <div class="cs-body">
+        <div>
+          <div class="cs-section-label" style="color:var(--rust)">❌ Starting Baseline</div>
+          <ul class="cs-list">
+            <li><span class="cs-icon">✕</span> Fresh domain — zero domain authority, zero backlinks, zero impressions</li>
+            <li><span class="cs-icon">✕</span> No Google Search Console property set up or sitemap submitted</li>
+            <li><span class="cs-icon">✕</span> No keyword strategy for any page — brand not discoverable via search</li>
+            <li><span class="cs-icon">✕</span> No structured data of any type across the entire site</li>
+            <li><span class="cs-icon">✕</span> No local SEO signals — GBP not configured or connected</li>
+          </ul>
+        </div>
+        <div>
+          <div class="cs-section-label" style="color:var(--green)">✅ Full SEO Strategy Implemented</div>
+          <ul class="cs-list">
+            <li><span class="cs-icon">✓</span> Connected Google Search Console — sitemap submitted, indexing requested</li>
+            <li><span class="cs-icon">✓</span> Full keyword research and mapping across all 6 SEO content pillars</li>
+            <li><span class="cs-icon">✓</span> Implemented WebSite + WebPage + Organisation schema sitewide</li>
+            <li><span class="cs-icon">✓</span> On-page: optimised H1–H3, meta titles/descriptions, internal linking</li>
+            <li><span class="cs-icon">✓</span> Technical: robots.txt, canonical tags, page speed optimisation, Core Web Vitals</li>
+            <li><span class="cs-icon">✓</span> AEO: FAQ schema, voice-search optimised content, question-based keywords</li>
+            <li><span class="cs-icon">✓</span> GEO: entity-based content, authoritative brand signals for AI citation</li>
+            <li><span class="cs-icon">✓</span> Off-page: domain submitted to directories, social profiles created as citations</li>
+          </ul>
+        </div>
+      </div>
+      <div class="cs-footer" style="background:rgba(201,168,76,0.08);border-top:1px solid rgba(201,168,76,0.2)">
+        <div class="cs-seo-pills">
+          <span class="cs-seo-pill" style="background:rgba(201,168,76,0.15);color:#8a6a00">On-Page ✓</span>
+          <span class="cs-seo-pill" style="background:var(--green-light);color:var(--green)">Off-Page ✓</span>
+          <span class="cs-seo-pill" style="background:var(--blue-light);color:var(--blue)">Technical ✓</span>
+          <span class="cs-seo-pill" style="background:var(--rust-light);color:var(--rust)">Local SEO ✓</span>
+          <span class="cs-seo-pill" style="background:var(--purple-light);color:var(--purple)">AEO ✓</span>
+          <span class="cs-seo-pill" style="background:var(--teal-light);color:var(--teal)">GEO ✓</span>
+        </div>
+        <a href="https://mgwix.online/" target="_blank" class="cs-view-link" style="background:var(--gold);color:#000">★ Visit Live Site →</a>
+      </div>
+    </div>
+
+  </div><!-- end case-study-list -->
+</section>
+
+<!-- SEO PILLARS -->
+<section id="seo">
+  <div class="section-header">
+    <span class="section-num">03 / SEO Skills</span>
+    <h2 class="section-title">Six pillars.<br>One complete strategy.</h2>
+  </div>
+
+  <div class="pillars-grid">
+
+    <!-- ON PAGE -->
+    <div class="pillar-card on-page">
+      <div class="pillar-icon">📄</div>
+      <div class="pillar-subtitle on-page">On-Page SEO</div>
+      <div class="pillar-title">Content & Structure Optimisation</div>
+      <p class="pillar-desc">Optimising every element that lives on the webpage — from title tags and meta descriptions to heading hierarchy, keyword placement, and internal linking.</p>
+      <ul class="pillar-tasks">
+        <li>Title tag & meta description writing with target keywords</li>
+        <li>H1–H3 heading structure with keyword hierarchy</li>
+        <li>Keyword density & semantic keyword (LSI) placement</li>
+        <li>Internal linking strategy across all pages</li>
+        <li>Image alt text optimisation with geo + keyword combos</li>
+        <li>URL structure: clean, descriptive, keyword-rich slugs</li>
+        <li>Content gap analysis vs. competitor pages</li>
+      </ul>
+    </div>
+
+    <!-- OFF PAGE -->
+    <div class="pillar-card off-page">
+      <div class="pillar-icon">🔗</div>
+      <div class="pillar-subtitle off-page">Off-Page SEO</div>
+      <div class="pillar-title">Authority & Link Building</div>
+      <p class="pillar-desc">Building the website's credibility through quality backlinks, citations, and brand mentions — all signals Google uses to rank pages higher.</p>
+      <ul class="pillar-tasks">
+        <li>Local citation building: JustDial, Sulekha, IndiaMart</li>
+        <li>Google Maps & Zomato listing optimisation</li>
+        <li>Food blogger outreach for backlink mentions</li>
+        <li>Guest posting on Surat lifestyle/food blogs</li>
+        <li>Social signals: Instagram, Facebook business pages</li>
+        <li>Review management strategy (Google, Zomato)</li>
+        <li>Competitor backlink gap analysis</li>
+      </ul>
+    </div>
+
+    <!-- TECHNICAL -->
+    <div class="pillar-card technical">
+      <div class="pillar-icon">⚙️</div>
+      <div class="pillar-subtitle technical">Technical SEO</div>
+      <div class="pillar-title">Site Health & Crawlability</div>
+      <p class="pillar-desc">Ensuring search engines can properly crawl, index, and render the website — covering speed, mobile-friendliness, structured data, and architecture.</p>
+      <ul class="pillar-tasks">
+        <li>Schema.org markup: LocalBusiness, Menu, FAQPage</li>
+        <li>XML sitemap creation & submission to GSC</li>
+        <li>Robots.txt configuration for proper crawling</li>
+        <li>Core Web Vitals audit (LCP, CLS, INP)</li>
+        <li>Mobile responsiveness testing & fixing</li>
+        <li>HTTPS security & canonical tag implementation</li>
+        <li>Page speed optimisation (image compression, lazy load)</li>
+      </ul>
+    </div>
+
+    <!-- LOCAL SEO -->
+    <div class="pillar-card local">
+      <div class="pillar-icon">📍</div>
+      <div class="pillar-subtitle local">Local SEO</div>
+      <div class="pillar-title">Geo-Targeted Visibility</div>
+      <p class="pillar-desc">Dominating local search results so that customers in Surat find Maymuna's Cafe when searching for cafes, coffee, or bakeries nearby.</p>
+      <ul class="pillar-tasks">
+        <li>Google Business Profile setup & full optimisation</li>
+        <li>NAP consistency: Name, Address, Phone across all platforms</li>
+        <li>Geo-targeted keywords: "cafe in Pal Road Surat", etc.</li>
+        <li>Local landing page with embedded Google Maps</li>
+        <li>Review generation campaign for star rating boost</li>
+        <li>GBP Posts: weekly offers, photos, announcements</li>
+        <li>"Near me" keyword targeting & optimisation</li>
+      </ul>
+    </div>
+
+    <!-- AEO -->
+    <div class="pillar-card aeo">
+      <div class="pillar-icon">🤖</div>
+      <div class="pillar-subtitle aeo">AEO — Answer Engine Optimisation</div>
+      <div class="pillar-title">Featured Snippets & Voice Search</div>
+      <p class="pillar-desc">Optimising content to appear in Google's Answer Boxes, People Also Ask sections, and voice search results — capturing zero-click traffic.</p>
+      <ul class="pillar-tasks">
+        <li>FAQ schema implementation on menu & about pages</li>
+        <li>Question-based keyword targeting ("what cafe is open in Surat?")</li>
+        <li>Structured Q&A content blocks on key pages</li>
+        <li>Concise, definition-first paragraph writing (40–60 words)</li>
+        <li>Voice search phrase optimisation (conversational queries)</li>
+        <li>People Also Ask (PAA) content expansion</li>
+        <li>HowTo schema for coffee brewing content</li>
+      </ul>
+    </div>
+
+    <!-- GEO -->
+    <div class="pillar-card geo">
+      <div class="pillar-icon">✨</div>
+      <div class="pillar-subtitle geo">GEO — Generative Engine Optimisation</div>
+      <div class="pillar-title">AI Search Visibility</div>
+      <p class="pillar-desc">Optimising content to be cited and recommended by AI tools like ChatGPT, Google Gemini, and Perplexity when users ask about cafes in Surat.</p>
+      <ul class="pillar-tasks">
+        <li>Entity-based SEO: clear brand entity signals across web</li>
+        <li>Authoritative "About" content with facts, history, unique claims</li>
+        <li>Structured data to make content machine-readable</li>
+        <li>High E-E-A-T signals (Experience, Expertise, Authority, Trust)</li>
+        <li>Consistent NAP + brand mentions across platforms</li>
+        <li>Wikipedia-style factual writing for AI ingestion</li>
+        <li>Monitoring AI citation tools (Perplexity, Gemini, ChatGPT)</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- KEYWORD RESULTS -->
+<section id="results">
+  <div class="section-header">
+    <span class="section-num">04 / Keyword Research Results</span>
+    <h2 class="section-title">Priority keywords mapped<br>to every page.</h2>
+  </div>
+  <table class="results-table">
+    <thead>
+      <tr>
+        <th>Keyword</th>
+        <th>Monthly Volume</th>
+        <th>Difficulty</th>
+        <th>Intent</th>
+        <th>Target Page</th>
+        <th>Opportunity</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td class="kw-cell">best cafe in surat<small>Top local keyword</small></td><td>14,800</td><td>Medium (55)</td><td><span class="tag tag-rust" style="font-size:11px;padding:3px 10px">Local</span></td><td>Homepage</td><td class="change-up">★★★★★</td></tr>
+      <tr><td class="kw-cell">maymuna's cafe surat<small>Brand keyword</small></td><td>1,600</td><td>Low (12)</td><td><span class="tag tag-blue" style="font-size:11px;padding:3px 10px">Nav</span></td><td>Homepage</td><td class="change-up">★★★★★</td></tr>
+      <tr><td class="kw-cell">golden latte surat<small>Menu item keyword</small></td><td>1,600</td><td>Low (22)</td><td><span class="tag tag-gold" style="font-size:11px;padding:3px 10px">Info</span></td><td>Menu Page</td><td class="change-up">★★★★★</td></tr>
+      <tr><td class="kw-cell">cafe in surat for couples<small>High-intent local</small></td><td>8,100</td><td>Medium (48)</td><td><span class="tag tag-rust" style="font-size:11px;padding:3px 10px">Local</span></td><td>Homepage</td><td class="change-up">★★★★☆</td></tr>
+      <tr><td class="kw-cell">avocado sourdough toast surat<small>Trending food keyword</small></td><td>2,900</td><td>Low (32)</td><td><span class="tag tag-rust" style="font-size:11px;padding:3px 10px">Local</span></td><td>Menu Page</td><td class="change-up">★★★★☆</td></tr>
+      <tr><td class="kw-cell">cafe near pal road surat<small>Hyper-local geo keyword</small></td><td>3,600</td><td>Low (36)</td><td><span class="tag tag-rust" style="font-size:11px;padding:3px 10px">Local</span></td><td>Contact Page</td><td class="change-up">★★★★☆</td></tr>
+      <tr><td class="kw-cell">cafe birthday celebration surat<small>Transactional — high conversion</small></td><td>2,400</td><td>Low (30)</td><td><span class="tag tag-green" style="font-size:11px;padding:3px 10px">Trans</span></td><td>About Page</td><td class="change-up">★★★★☆</td></tr>
+      <tr><td class="kw-cell">artisan bakery surat<small>Bakery category keyword</small></td><td>3,600</td><td>Medium (38)</td><td><span class="tag tag-rust" style="font-size:11px;padding:3px 10px">Local</span></td><td>Menu Page</td><td class="change-up">★★★☆☆</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- AI PLATFORMS SECTION -->
+<section id="ai-platforms" style="background:var(--ink);color:white;padding:5rem 3rem">
+  <div class="section-header" style="margin-bottom:1rem">
+    <span class="section-num" style="color:var(--gold)">05 / AI-Driven SEO</span>
+    <h2 class="section-title" style="color:white">I use AI platforms to work<br><em style="font-style:italic;color:var(--gold)">10× faster & smarter.</em></h2>
+    <p style="font-size:14px;font-weight:300;color:rgba(255,255,255,0.55);margin-top:1rem;max-width:580px;line-height:1.9">As an AI-driven SEO Executive, I use AI tools to research faster, write better content, automate audits, and monitor how AI search engines cite my clients. Here's every platform I use and exactly how I use it for SEO.</p>
+  </div>
+
+  <style>
+    .ai-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:2rem;margin-top:2rem}
+    .ai-tab{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:99px;padding:7px 18px;font-size:12px;font-weight:500;color:rgba(255,255,255,0.6);cursor:pointer;transition:all 0.2s;letter-spacing:0.04em}
+    .ai-tab:hover,.ai-tab.active{background:var(--gold);border-color:var(--gold);color:#000}
+    .ai-panel{display:none}.ai-panel.active{display:block}
+    .ai-platform-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.25rem}
+    .ai-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:1.75rem;transition:all 0.2s;position:relative;overflow:hidden}
+    .ai-card:hover{background:rgba(255,255,255,0.09);border-color:rgba(201,168,76,0.4)}
+    .ai-card-logo{font-size:1.8rem;margin-bottom:0.75rem}
+    .ai-card-name{font-family:var(--serif);font-size:1.1rem;font-weight:700;color:white;margin-bottom:3px}
+    .ai-card-type{font-family:var(--mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem}
+    .ai-card-use{font-size:13px;font-weight:300;color:rgba(255,255,255,0.65);line-height:1.8;margin-bottom:1rem}
+    .ai-task-list{list-style:none}
+    .ai-task-list li{font-size:12.5px;color:rgba(255,255,255,0.55);padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.06);display:flex;gap:8px;align-items:flex-start}
+    .ai-task-list li:last-child{border-bottom:none}
+    .ai-task-list li::before{content:'→';color:var(--gold);flex-shrink:0;font-size:11px;margin-top:2px}
+    .ai-mockup{background:rgba(0,0,0,0.4);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:14px;margin-top:1rem;font-family:var(--mono);font-size:11.5px;line-height:1.8;color:rgba(255,255,255,0.7)}
+    .ai-mockup .prompt{color:#89b4fa;margin-bottom:6px} .ai-mockup .response{color:#a6e3a1}
+    .ai-mockup .label{color:rgba(255,255,255,0.3);font-size:10px;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:4px}
+    .sample-note{background:rgba(201,168,76,0.12);border-left:2px solid var(--gold);border-radius:0 8px 8px 0;padding:10px 14px;font-size:12px;color:rgba(255,255,255,0.6);margin-top:10px;line-height:1.7}
+    .sample-note strong{color:var(--gold)}
+  </style>
+
+  <div class="ai-tabs">
+    <div class="ai-tab active" onclick="showAI('research')">🔍 Research & KW</div>
+    <div class="ai-tab" onclick="showAI('content')">✍️ Content Writing</div>
+    <div class="ai-tab" onclick="showAI('technical')">⚙️ Technical</div>
+    <div class="ai-tab" onclick="showAI('monitoring')">📡 AI Monitoring</div>
+    <div class="ai-tab" onclick="showAI('image')">🎨 Visual & Reports</div>
+  </div>
+
+  <!-- RESEARCH TAB -->
+  <div class="ai-panel active" id="ai-research">
+    <div class="ai-platform-grid">
+      <div class="ai-card">
+        <div class="ai-card-logo">🤖</div>
+        <div class="ai-card-name">ChatGPT (GPT-4o)</div>
+        <div class="ai-card-type">OpenAI · Research & Strategy</div>
+        <div class="ai-card-use">I use ChatGPT to brainstorm keyword clusters, identify search intent, generate content briefs, and analyse competitor strategies — all in seconds.</div>
+        <ul class="ai-task-list">
+          <li>Generate 50 long-tail keywords from a seed keyword</li>
+          <li>Identify People Also Ask questions for any topic</li>
+          <li>Classify keyword intent (informational/transactional/local)</li>
+          <li>Build content briefs with headings and FAQs</li>
+        </ul>
+        <div class="ai-mockup">
+          <div class="label">Sample Prompt I Used ↓</div>
+          <div class="prompt">Me: "Give me 20 long-tail keywords for a premium cafe in Surat, Gujarat. Include local intent, food-specific, and occasion-based keywords with search intent labels."</div>
+          <div class="response">GPT: 1. "best cafe in Surat for couples" [Local/Nav] 2. "golden latte cafe Surat" [Info] 3. "cafe birthday celebration Surat" [Trans] 4. "artisan bakery Surat Gujarat" [Local] 5. "cafe near Pal Road Surat" [Local]...</div>
+        </div>
+        <div class="sample-note"><strong>📚 How to use for real work:</strong> When you get a new client, paste their business description into ChatGPT and ask for keyword clusters grouped by intent. Then verify volumes in Google Keyword Planner.</div>
+      </div>
+
+      <div class="ai-card">
+        <div class="ai-card-logo">🔮</div>
+        <div class="ai-card-name">Claude (Anthropic)</div>
+        <div class="ai-card-type">Anthropic · Analysis & Writing</div>
+        <div class="ai-card-use">Claude excels at analysing existing websites, comparing content to competitors, identifying SEO gaps, and writing long-form SEO content that sounds natural.</div>
+        <ul class="ai-task-list">
+          <li>Analyse website URL and list all SEO problems</li>
+          <li>Compare my page vs competitor page — find gaps</li>
+          <li>Write keyword-rich About/Menu page content</li>
+          <li>Create FAQ sections optimised for AEO</li>
+        </ul>
+        <div class="ai-mockup">
+          <div class="label">Sample Prompt I Used ↓</div>
+          <div class="prompt">Me: "Analyse this website: memunagandhi.github.io/cafe-website — list every on-page SEO problem and write an optimised H1, meta description, and first paragraph for the homepage targeting 'best cafe in Surat'."</div>
+          <div class="response">Claude: Problems found: H1 has no keyword value, missing meta descriptions on 3 pages, no alt text on images... Optimised H1: "Best Cafe in Surat | Premium Coffee & Artisan Bakery — Maymuna's Cafe"</div>
+        </div>
+        <div class="sample-note"><strong>📚 How to use for real work:</strong> Share any website URL with Claude and ask it to audit on-page SEO. Then paste competitor URLs and ask "what content does my client's page lack vs this competitor?"</div>
+      </div>
+
+      <div class="ai-card">
+        <div class="ai-card-logo">🌊</div>
+        <div class="ai-card-name">Perplexity AI</div>
+        <div class="ai-card-type">Perplexity · Live Search + Citations</div>
+        <div class="ai-card-use">Perplexity searches the live web and gives cited answers. I use it to research competitors, find trending topics in any niche, and check if my clients appear in AI answers.</div>
+        <ul class="ai-task-list">
+          <li>Research "best cafes in Surat" — see who AI recommends</li>
+          <li>Find trending food/coffee topics for blog content ideas</li>
+          <li>Check competitor backlink profiles in real-time</li>
+          <li>Monitor if client brand appears in AI responses</li>
+        </ul>
+        <div class="ai-mockup">
+          <div class="label">GEO Monitoring — Sample Query ↓</div>
+          <div class="prompt">Query: "What are the best specialty cafes in Surat, Gujarat?"</div>
+          <div class="response">Perplexity Answer: "Surat has a growing cafe scene... [Source: Zomato, JustDial] Top picks include..." → ⚠️ Maymuna's Cafe NOT mentioned yet. Action: Build more citations + get food blog feature.</div>
+        </div>
+        <div class="sample-note"><strong>📚 How to use for real work:</strong> Every month, search your client's target keywords in Perplexity. If they're not mentioned, it means they need more citations, backlinks, and authoritative content. This is your GEO gap analysis.</div>
+      </div>
+
+      <div class="ai-card">
+        <div class="ai-card-logo">💎</div>
+        <div class="ai-card-name">Google Gemini</div>
+        <div class="ai-card-type">Google · Search Intent & Trends</div>
+        <div class="ai-card-use">Gemini is deeply integrated with Google Search. I use it to understand exactly how Google interprets search intent and to predict which content formats Google prefers to rank.</div>
+        <ul class="ai-task-list">
+          <li>Ask "how does Google rank local cafes?" for strategy insights</li>
+          <li>Generate Google-native content structures</li>
+          <li>Understand E-E-A-T requirements per niche</li>
+          <li>Check if business appears in Gemini's AI Overview</li>
+        </ul>
+        <div class="ai-mockup">
+          <div class="label">Sample GEO Test ↓</div>
+          <div class="prompt">Query to Gemini: "Best cafe for couples in Surat Gujarat with good coffee"</div>
+          <div class="response">Gemini AI Overview: "Surat's cafe scene offers... [not yet citing Maymuna's Cafe]" → Next action: Improve GBP completeness, get 15+ reviews, publish 3 blog posts about couples cafes in Surat.</div>
+        </div>
+        <div class="sample-note"><strong>📚 How to use for real work:</strong> When Google adds an AI Overview to a search result, it pulls from pages Google trusts most. To get featured there: have authoritative content, structured data, and strong E-E-A-T signals.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTENT TAB -->
+  <div class="ai-panel" id="ai-content">
+    <div class="ai-platform-grid">
+      <div class="ai-card">
+        <div class="ai-card-logo">✍️</div>
+        <div class="ai-card-name">ChatGPT + SEO Brief</div>
+        <div class="ai-card-type">Content Creation Workflow</div>
+        <div class="ai-card-use">I follow a 3-step AI content workflow: (1) research keywords, (2) build a brief, (3) generate + edit content. This creates content that ranks AND reads naturally.</div>
+        <ul class="ai-task-list">
+          <li>Step 1: Research target keyword + top 3 competitor pages</li>
+          <li>Step 2: Build content brief with H1, H2s, word count, FAQs</li>
+          <li>Step 3: Generate draft → edit for brand voice → add schema</li>
+          <li>Step 4: Run through Surfer SEO or NeuronWriter for score</li>
+        </ul>
+        <div class="ai-mockup">
+          <div class="label">Menu Page Content Brief (Sample) ↓</div>
+          <div class="prompt">Target KW: "golden latte surat" | Word count: 400 | H1: "Signature Golden Latte in Surat — Only at Maymuna's Cafe"</div>
+          <div class="response">H2s to include: What is a Golden Latte? | Our Golden Latte Recipe | Where to Get Golden Latte in Surat | Nutritional Benefits | How to Order | FAQs (3 questions)</div>
+        </div>
+        <div class="sample-note"><strong>📚 How to use for real work:</strong> Never publish raw AI content. Always: (1) add real facts/data, (2) match the brand's tone, (3) check with Grammarly, (4) add schema markup. AI writes the draft — you make it rank.</div>
+      </div>
+
+      <div class="ai-card">
+        <div class="ai-card-logo">🦜</div>
+        <div class="ai-card-name">Jasper AI</div>
+        <div class="ai-card-type">Jasper.ai · SEO Content Writing</div>
+        <div class="ai-card-use">Jasper is built specifically for marketing content. It has SEO templates for blog posts, meta descriptions, product descriptions, and Google Ads copy — all keyword-optimised.</div>
+        <ul class="ai-task-list">
+          <li>Blog post: "5 Reasons Maymuna's Cafe Has the Best Coffee in Surat"</li>
+          <li>Product description for each menu item with keywords</li>
+          <li>Google Business Profile description (750 chars, keyword-rich)</li>
+          <li>Email newsletter for customer re-engagement</li>
+        </ul>
+        <div class="ai-mockup">
+          <div class="label">Sample: Menu Item Description ↓</div>
+          <div class="prompt">Template: Product Description | Tone: Premium, Warm | KW: "golden latte surat"</div>
+          <div class="response">Output: "Discover Surat's most talked-about coffee — our Signature Golden Latte. Crafted with 100% Arabica espresso, organic turmeric, raw honey, and steamed oat milk, this anti-inflammatory golden blend is available only at Maymuna's Cafe, Pal Road. ₹345."</div>
+        </div>
+        <div class="sample-note"><strong>📚 How to use for real work:</strong> Use Jasper's "Product Description" template for every menu item. Input: product name, key benefit, target keyword, tone. Output: ready-to-publish description that includes your keyword naturally.</div>
+      </div>
+
+      <div class="ai-card">
+        <div class="ai-card-logo">🏄</div>
+        <div class="ai-card-name">Surfer SEO</div>
+        <div class="ai-card-type">Surfer · Content Scoring & Optimisation</div>
+        <div class="ai-card-use">Surfer analyses the top 20 ranking pages for any keyword and tells me exactly how to optimise my content — word count, keyword frequency, headings, images, and more.</div>
+        <ul class="ai-task-list">
+          <li>Content Score target: 70+ (aim for green zone)</li>
+          <li>Recommended word count for "best cafe surat": 1,400 words</li>
+          <li>Missing keywords to add: "specialty coffee", "artisan", "Pal Road"</li>
+          <li>NLP terms to include: "ambiance", "freshly baked", "Arabica"</li>
+        </ul>
+        <div class="ai-mockup">
+          <div class="label">Sample Surfer Report — Homepage ↓</div>
+          <div class="prompt">Keyword: "best cafe in surat" | Current Score: 34/100</div>
+          <div class="response">✕ Word count: 280 (need 1,350+) ✕ Missing: "specialty coffee" (use 4×) ✕ Missing: "artisan bakery" (use 3×) ✕ Missing: "Pal Road Surat" (use 2×) ✓ Title tag: optimised ✓ H1 includes keyword</div>
+        </div>
+        <div class="sample-note"><strong>📚 How to use for real work:</strong> Before writing any page, open Surfer SEO, enter your target keyword, and check the Content Editor. It shows you EXACTLY what words to use and how many times. Follow its recommendations to score 70+.</div>
+      </div>
+
+      <div class="ai-card">
+        <div class="ai-card-logo">🧠</div>
+        <div class="ai-card-name">NeuronWriter</div>
+        <div class="ai-card-type">AI Content Optimiser · NLP-Based</div>
+        <div class="ai-card-use">NeuronWriter uses NLP (Natural Language Processing) to find semantic terms Google expects to see in content — helping content rank without keyword stuffing.</div>
+        <ul class="ai-task-list">
+          <li>NLP term analysis: find related entities Google expects</li>
+          <li>Content brief generation from SERP analysis</li>
+          <li>Competitor content gap identification</li>
+          <li>Internal linking suggestions between pages</li>
+        </ul>
+        <div class="ai-mockup">
+          <div class="label">Sample NLP Terms for "Cafe Surat" ↓</div>
+          <div class="prompt">NLP Entities Google expects to see on a "cafe surat" page:</div>
+          <div class="response">Required: "coffee shop" "Gujarat" "ambiance" "bakery" "espresso" "latte" "menu" "opening hours" Optional: "outdoor seating" "wifi" "vegan options" "Instagram-worthy" "specialty coffee"</div>
+        </div>
+        <div class="sample-note"><strong>📚 How to use for real work:</strong> If your content scores low, add the NLP terms naturally into your paragraphs. Google's algorithm checks for these related terms to verify your content is genuinely about the topic — not just keyword-stuffed.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TECHNICAL TAB -->
+  <div class="ai-panel" id="ai-technical">
+    <div class="ai-platform-grid">
+      <div class="ai-card">
+        <div class="ai-card-logo">🐸</div>
+        <div class="ai-card-name">Screaming Frog SEO Spider</div>
+        <div class="ai-card-type">Technical Audit Tool</div>
+        <div class="ai-card-use">Screaming Frog crawls the entire website like Google does and reports every technical problem — broken links, missing meta tags, duplicate content, redirect chains, and more.</div>
+        <ul class="ai-task-list">
+          <li>Crawl all pages → find missing title tags & meta descriptions</li>
+          <li>Find all images missing alt text (exported as CSV)</li>
+          <li>Identify broken internal links (404 errors)</li>
+          <li>Check for duplicate H1 tags across pages</li>
+          <li>Generate XML sitemap from crawl results</li>
+        </ul>
+        <div class="ai-mockup">
+          <div class="label">Sample Crawl Report — Maymuna's Cafe ↓</div>
+          <div class="prompt">Pages crawled: 5 | Crawl date: June 2025</div>
+          <div class="response">Issues: 3 pages missing meta description | 6 images missing alt text | 0 broken links | 1 redirect found | 5 pages missing schema markup | 2 pages have title tags under 30 chars</div>
+        </div>
+        <div class="sample-note"><strong>📚 How to use for real work:</strong> Run Screaming Frog on every new client. Export the "Response Codes" tab to find broken links, "Page Titles" tab to check all title tags, and "Images" tab to find missing alt text. This is your technical SEO audit deliverable.</div>
+      </div>
+
+      <div class="ai-card">
+        <div class="ai-card-logo">🚀</div>
+        <div class="ai-card-name">Google PageSpeed Insights</div>
+        <div class="ai-card-type">Google · Core Web Vitals</div>
+        <div class="ai-card-use">PageSpeed Insights measures how fast a website loads on mobile and desktop — a direct Google ranking factor. I use it to diagnose and fix speed issues.</div>
+        <ul class="ai-task-list">
+          <li>LCP (Largest Contentful Paint): should be under 2.5s</li>
+          <li>CLS (Cumulative Layout Shift): should be under 0.1</li>
+          <li>INP (Interaction to Next Paint): should be under 200ms</li>
+          <li>Fix: compress images, remove unused CSS/JS, enable caching</li>
+        </ul>
+        <div class="ai-mockup">
+          <div class="label">Sample Report — Maymuna's Cafe Mobile ↓</div>
+          <div class="prompt">URL: memunagandhi.github.io/cafe-website/ | Device: Mobile</div>
+          <div class="response">Performance: 62/100 ⚠️ | LCP: 4.1s ✕ (fix: compress hero image) | CLS: 0.08 ✓ | INP: 180ms ✓ | Opportunity: "Reduce image sizes — saves 2.1s" | Fix: Convert hero to WebP format, add loading="lazy"</div>
+        </div>
+        <div class="sample-note"><strong>📚 How to use for real work:</strong> Test every page at pagespeed.web.dev. Score 90+ on mobile = good. The biggest fix is always images — convert JPG/PNG to WebP format and compress. This alone can improve score by 20+ points.</div>
+      </div>
+
+      <div class="ai-card">
+        <div class="ai-card-logo">🧬</div>
+        <div class="ai-card-name">Schema.org Validator</div>
+        <div class="ai-card-type">Google Rich Results Test</div>
+        <div class="ai-card-use">After adding schema markup to a website, I use Google's Rich Results Test to verify the schema is valid and eligible to show as rich snippets in search results.</div>
+        <ul class="ai-task-list">
+          <li>Validate LocalBusiness schema is correctly formatted</li>
+          <li>Check FAQPage schema shows in preview</li>
+          <li>Test Menu schema for restaurant rich results</li>
+          <li>Fix any errors before submitting to GSC</li>
+        </ul>
+        <div class="ai-mockup">
+          <div class="label">Sample Validation Result ↓</div>
+          <div class="prompt">URL tested: /cafe-website/ | Schema type: CafeOrCoffeeShop</div>
+          <div class="response">✓ CafeOrCoffeeShop detected | ✓ name: "Maymuna's Cafe" | ✓ address: valid | ✓ openingHours: valid | ✓ telephone: valid | ⚠️ "image" property missing — add cafe photo URL | Eligible for: Local Business rich result ✓</div>
+        </div>
+        <div class="sample-note"><strong>📚 How to use for real work:</strong> After adding any schema, go to search.google.com/test/rich-results, paste your URL, and check the results. Green = valid. Any red errors mean the schema won't work — fix them before Google crawls the page.</div>
+      </div>
+
+      <div class="ai-card">
+        <div class="ai-card-logo">📊</div>
+        <div class="ai-card-name">Semrush Site Audit</div>
+        <div class="ai-card-type">Semrush · Full Technical Audit</div>
+        <div class="ai-card-use">Semrush's Site Audit tool checks 130+ technical SEO factors and gives an overall Health Score. I use it to prioritise which technical issues to fix first.</div>
+        <ul class="ai-task-list">
+          <li>Site Health Score: 0–100 (target: 80+)</li>
+          <li>Errors: critical issues that hurt rankings immediately</li>
+          <li>Warnings: issues that affect performance gradually</li>
+          <li>Notices: minor improvements to consider</li>
+        </ul>
+        <div class="ai-mockup">
+          <div class="label">Sample Site Audit — Maymuna's Cafe ↓</div>
+          <div class="prompt">Site Health: 61/100 ⚠️ | Pages crawled: 5</div>
+          <div class="response">🔴 Errors (3): No sitemap.xml | No robots.txt | 3 pages missing meta description 🟡 Warnings (5): 6 images missing alt text | Page speed below 70 | No schema markup | No H1 on gallery page | Thin content (&lt;300 words) on contact page</div>
+        </div>
+        <div class="sample-note"><strong>📚 How to use for real work:</strong> Fix all 🔴 Errors first — they have the most ranking impact. Then work through 🟡 Warnings. Run the audit again after fixes to show client the Health Score improved. Include before/after screenshots in your report.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MONITORING TAB -->
+  <div class="ai-panel" id="ai-monitoring">
+    <div class="ai-platform-grid">
+      <div class="ai-card">
+        <div class="ai-card-logo">📈</div>
+        <div class="ai-card-name">Google Search Console</div>
+        <div class="ai-card-type">Google · Rankings & Indexing</div>
+        <div class="ai-card-use">Google Search Console (GSC) is the most important free SEO tool. It shows which keywords bring traffic, how pages rank, and which pages Google has indexed.</div>
+        <ul class="ai-task-list">
+          <li>Check which keywords get impressions and clicks</li>
+          <li>Find pages with high impressions but low CTR → fix title/meta</li>
+          <li>Submit sitemap and request indexing for new pages</li>
+          <li>Monitor Core Web Vitals report</li>
+        </ul>
+        <div class="ai-mockup">
+          <div class="label">Sample GSC Performance Report — 3 months ↓</div>
+          <div class="prompt">Property: memunagandhi.github.io | Date: Apr–Jun 2025</div>
+          <div class="response">Total Clicks: 284 | Impressions: 4,120 | Avg CTR: 6.9% | Avg Position: 18.4 | Top KW: "maymuna cafe surat" (pos 3) | "best cafe surat" (pos 24 → opportunity!) | Pages: Homepage gets 68% of all clicks</div>
+        </div>
+        <div class="sample-note"><strong>📚 How to use for real work:</strong> Look for keywords with 500+ impressions but low CTR (under 5%). These rank but don't get clicked — rewrite the title tag and meta description to be more compelling. This is a quick win that improves traffic without improving rankings.</div>
+      </div>
+
+      <div class="ai-card">
+        <div class="ai-card-logo">🔭</div>
+        <div class="ai-card-name">Ahrefs</div>
+        <div class="ai-card-type">Ahrefs · Backlinks & Competitor Analysis</div>
+        <div class="ai-card-use">Ahrefs shows who links to your website and your competitors' websites. I use it to find backlink opportunities, track domain authority growth, and spy on competitor strategies.</div>
+        <ul class="ai-task-list">
+          <li>Check Domain Rating (DR) — track monthly growth</li>
+          <li>See all backlinks to competitor cafes in Surat</li>
+          <li>Find which sites link to competitors but not to us</li>
+          <li>Track keyword ranking positions over time</li>
+        </ul>
+        <div class="ai-mockup">
+          <div class="label">Sample Backlink Gap Analysis ↓</div>
+          <div class="prompt">My site: DR 0 | Competitor "Cafe Surat XYZ": DR 18</div>
+          <div class="response">Competitor backlinks we're missing: suratfoodie.com (DA 38) | gujaratlifestyle.in (DA 31) | justdial.com ✓ already listed | zomato.com ✓ listed | Times of Surat (DA 42) — write a pitch to get featured in their "best cafes" article</div>
+        </div>
+        <div class="sample-note"><strong>📚 How to use for real work:</strong> In Ahrefs, go to "Link Intersect" — enter your site and 3 competitors. It shows every site that links to competitors but NOT to you. These are your best backlink opportunities because those sites already link to similar businesses.</div>
+      </div>
+
+      <div class="ai-card">
+        <div class="ai-card-logo">👁️</div>
+        <div class="ai-card-name">Brand24 / Mention.com</div>
+        <div class="ai-card-type">Brand Monitoring · AI-powered</div>
+        <div class="ai-card-use">Brand24 monitors the entire web for mentions of "Maymuna's Cafe" across news, blogs, social media, forums, and review sites — in real-time.</div>
+        <ul class="ai-task-list">
+          <li>Get alerted when anyone mentions the cafe online</li>
+          <li>Track sentiment of mentions (positive/negative/neutral)</li>
+          <li>Respond to reviews and mentions quickly</li>
+          <li>Find unlinked brand mentions → convert to backlinks</li>
+        </ul>
+        <div class="ai-mockup">
+          <div class="label">Sample Brand Monitoring Alert ↓</div>
+          <div class="prompt">Keyword monitored: "Maymuna's Cafe" | Alert type: New mention</div>
+          <div class="response">📍 New mention on Instagram @surat_foodie: "Just tried the Golden Latte at Maymuna's Cafe — absolutely worth it!" [No website link] → Action: Comment + DM asking them to add our website link to their bio or story</div>
+        </div>
+        <div class="sample-note"><strong>📚 How to use for real work:</strong> Unlinked mentions are GOLD. When someone writes about your client but doesn't link to them, email them and politely ask to add a link. This converts free brand mentions into backlinks — a completely legitimate link building strategy.</div>
+      </div>
+
+      <div class="ai-card">
+        <div class="ai-card-logo">📍</div>
+        <div class="ai-card-name">BrightLocal</div>
+        <div class="ai-card-type">Local SEO Tracking Platform</div>
+        <div class="ai-card-use">BrightLocal tracks local search rankings, manages citations across 100+ directories, and monitors Google Business Profile performance — all from one dashboard.</div>
+        <ul class="ai-task-list">
+          <li>Track rankings for "cafe near me" by exact GPS location</li>
+          <li>Audit NAP consistency across 50+ directories</li>
+          <li>Monitor Google Business Profile views and calls</li>
+          <li>Track competitor local rankings week by week</li>
+        </ul>
+        <div class="ai-mockup">
+          <div class="label">Sample Local Rank Tracker ↓</div>
+          <div class="prompt">Client: Maymuna's Cafe | Location: Pal Road, Surat | Date: Jun 2025</div>
+          <div class="response">"best cafe surat" → Pos 14 (Maps) | "cafe near pal road surat" → Pos 7 (Maps) | "golden latte surat" → Pos 4 (Web) | "cafe surat couples" → Pos 19 (Maps) | GBP views: 342/month | Direction clicks: 28 | Phone calls: 14</div>
+        </div>
+        <div class="sample-note"><strong>📚 How to use for real work:</strong> Local rankings change by location — someone 500m away might see you at position 3, someone 2km away might see position 11. BrightLocal shows your ranking from the client's exact location. Include a rank tracking chart in every monthly client report.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VISUAL TAB -->
+  <div class="ai-panel" id="ai-image">
+    <div class="ai-platform-grid">
+      <div class="ai-card">
+        <div class="ai-card-logo">🎨</div>
+        <div class="ai-card-name">Canva AI + Magic Write</div>
+        <div class="ai-card-type">Design + AI Writing</div>
+        <div class="ai-card-use">I use Canva to create SEO reports, client presentations, infographics, and social media posts for GBP. Canva's Magic Write AI generates captions and post copy instantly.</div>
+        <ul class="ai-task-list">
+          <li>Monthly SEO report design (client-ready PDF)</li>
+          <li>Google Business Profile posts with branded visuals</li>
+          <li>Infographic: "How Local SEO Works" for client education</li>
+          <li>Keyword research spreadsheet → visual chart export</li>
+        </ul>
+        <div class="ai-mockup">
+          <div class="label">Sample GBP Post Created in Canva ↓</div>
+          <div class="prompt">Magic Write prompt: "Write a GBP post for Maymuna's Cafe Surat promoting our Golden Latte — warm, premium tone, include hashtags"</div>
+          <div class="response">Output: "☕ Surat's most unique coffee is here. Our Signature Golden Latte — Arabica espresso, organic turmeric & oat milk — is your new daily ritual. Visit us at Pal Road. ₹345. #MaymunaCafe #CafeSurat #GoldenLatte"</div>
+        </div>
+        <div class="sample-note"><strong>📚 How to use for real work:</strong> Create a Canva template for monthly reports with your client's branding. Each month, update the data and export as PDF. This makes you look very professional and shows clients exactly what you've done and what results were achieved.</div>
+      </div>
+
+      <div class="ai-card">
+        <div class="ai-card-logo">📊</div>
+        <div class="ai-card-name">Google Looker Studio</div>
+        <div class="ai-card-type">Google · SEO Dashboard & Reporting</div>
+        <div class="ai-card-use">Looker Studio (formerly Data Studio) connects to GSC + GA4 and creates beautiful live dashboards. I use it to build automated monthly SEO reports for clients.</div>
+        <ul class="ai-task-list">
+          <li>Connect GSC + GA4 + GBP data in one dashboard</li>
+          <li>Show clicks, impressions, rankings, traffic in one view</li>
+          <li>Share live dashboard URL with client — auto-updates</li>
+          <li>Add ranking progress chart, backlink count, technical score</li>
+        </ul>
+        <div class="ai-mockup">
+          <div class="label">Sample Dashboard Metrics — Month 1 ↓</div>
+          <div class="prompt">Client: Maymuna's Cafe | Reporting period: June 2025</div>
+          <div class="response">Organic Clicks: 284 (+0%, baseline month) | Impressions: 4,120 | Keywords ranking: 12 | Backlinks built: 6 | GBP Views: 342 | Site Health: 61→74 (+13pts) | Target next month: 400 clicks, 5,000 impressions</div>
+        </div>
+        <div class="sample-note"><strong>📚 How to use for real work:</strong> Build a Looker Studio template once and reuse it for every client. Set up: GSC → clicks/impressions chart, GA4 → sessions/bounce rate, GBP → views/calls. Share the live link with the client so they can check anytime — this builds trust.</div>
+      </div>
+
+      <div class="ai-card">
+        <div class="ai-card-logo">🤖</div>
+        <div class="ai-card-name">Bing Copilot / Microsoft AI</div>
+        <div class="ai-card-type">Microsoft · AI Search Monitoring</div>
+        <div class="ai-card-use">Bing Copilot is an AI search engine with a large user base. I test if clients appear in Bing AI answers and optimise Bing Places (Bing's equivalent of GBP) for additional local visibility.</div>
+        <ul class="ai-task-list">
+          <li>Set up Bing Places for Business profile</li>
+          <li>Test if client appears in Bing Copilot AI answers</li>
+          <li>Submit sitemap to Bing Webmaster Tools</li>
+          <li>Track Bing keyword rankings separately from Google</li>
+        </ul>
+        <div class="ai-mockup">
+          <div class="label">Sample Bing Copilot GEO Test ↓</div>
+          <div class="prompt">Query: "Best coffee cafe in Surat, Gujarat with outdoor seating"</div>
+          <div class="response">Bing Copilot: "Based on Bing Places and reviews, some popular cafes in Surat include... [currently listing competitor cafes]" → Action needed: Submit Bing Places profile, add Bing sitemap, build Bing-indexed backlinks from local news sites.</div>
+        </div>
+        <div class="sample-note"><strong>📚 How to use for real work:</strong> Bing has 6% search market share in India — not huge but free to optimise. Submit sitemap to Bing Webmaster Tools (free), create Bing Places profile, and you'll capture extra traffic competitors ignore. Takes 1 hour of setup.</div>
+      </div>
+
+      <div class="ai-card">
+        <div class="ai-card-logo">📱</div>
+        <div class="ai-card-name">Google Analytics 4 (GA4)</div>
+        <div class="ai-card-type">Google · Traffic & Behaviour Analysis</div>
+        <div class="ai-card-use">GA4 shows where website visitors come from, what pages they visit, how long they stay, and whether they convert. I use AI insights in GA4 to identify SEO opportunities.</div>
+        <ul class="ai-task-list">
+          <li>Check: what % of traffic comes from organic search?</li>
+          <li>Find highest bounce-rate pages → improve content</li>
+          <li>See which cities visitors come from (target those areas)</li>
+          <li>Use GA4 AI Insights for anomaly detection</li>
+        </ul>
+        <div class="ai-mockup">
+          <div class="label">Sample GA4 Report — Maymuna's Cafe ↓</div>
+          <div class="prompt">Property: Maymuna's Cafe | Date: June 2025 | Sessions: 412</div>
+          <div class="response">Organic Search: 69% | Direct: 18% | Social: 13% | Top page: /menu.html (38% of sessions) | Avg session duration: 1m 42s | Bounce rate: 74% ⚠️ (fix: add internal links) | Top city: Surat (88%) | Vesu: 7% | Adajan: 5%</div>
+        </div>
+        <div class="sample-note"><strong>📚 How to use for real work:</strong> High bounce rate (70%+) on a page means visitors leave immediately. Fix: add internal links to other pages, improve content quality, add a clear CTA button. When bounce rate drops, dwell time increases → Google sees the page as more valuable → rankings improve.</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  function showAI(tab) {
+    document.querySelectorAll('.ai-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.ai-tab').forEach(t => t.classList.remove('active'));
+    document.getElementById('ai-' + tab).classList.add('active');
+    event.target.classList.add('active');
+  }
+  </script>
+</section>
+
+<!-- TOOLS GRID -->
+<section>
+  <div class="section-header">
+    <span class="section-num">06 / SEO Tools Mastery</span>
+    <h2 class="section-title">Every tool I know —<br>and exactly what I use it for.</h2>
+  </div>
+
+  <style>
+    .tool-category{margin-bottom:2.5rem}
+    .tool-cat-label{font-family:var(--mono);font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:#999;margin-bottom:1rem;display:flex;align-items:center;gap:10px}
+    .tool-cat-label::after{content:'';flex:1;height:1px;background:rgba(0,0,0,0.08)}
+    .tools-grid-new{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px}
+    .tool-card-new{background:white;border:1px solid rgba(0,0,0,0.07);border-radius:12px;padding:14px 16px;display:flex;align-items:flex-start;gap:12px;transition:all 0.2s}
+    .tool-card-new:hover{border-color:var(--gold);box-shadow:0 4px 20px rgba(0,0,0,0.08)}
+    .tool-emoji{font-size:1.4rem;flex-shrink:0;margin-top:1px}
+    .tool-info-name{font-size:13.5px;font-weight:500;color:var(--ink)}
+    .tool-info-use{font-size:11.5px;color:#888;font-weight:300;margin-top:2px;line-height:1.5}
+    .tool-level{display:flex;gap:3px;margin-top:6px}
+    .tl-dot{width:7px;height:7px;border-radius:50%;background:#e0e0e0}
+    .tl-dot.f{background:var(--gold)}
+  </style>
+
+  <div class="tool-category">
+    <div class="tool-cat-label">🤖 AI Platforms</div>
+    <div class="tools-grid-new">
+      <div class="tool-card-new"><div class="tool-emoji">🤖</div><div><div class="tool-info-name">ChatGPT (GPT-4o)</div><div class="tool-info-use">Keyword research, content briefs, FAQ writing</div><div class="tool-level"><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot f"></div></div></div></div>
+      <div class="tool-card-new"><div class="tool-emoji">🔮</div><div><div class="tool-info-name">Claude (Anthropic)</div><div class="tool-info-use">Website analysis, long-form SEO content</div><div class="tool-level"><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot f"></div></div></div></div>
+      <div class="tool-card-new"><div class="tool-emoji">🌊</div><div><div class="tool-info-name">Perplexity AI</div><div class="tool-info-use">AI citation monitoring, live research</div><div class="tool-level"><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot"></div></div></div></div>
+      <div class="tool-card-new"><div class="tool-emoji">💎</div><div><div class="tool-info-name">Google Gemini</div><div class="tool-info-use">AI Overview monitoring, Google intent analysis</div><div class="tool-level"><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot"></div></div></div></div>
+      <div class="tool-card-new"><div class="tool-emoji">🦜</div><div><div class="tool-info-name">Jasper AI</div><div class="tool-info-use">SEO blog posts, product descriptions, ad copy</div><div class="tool-level"><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot"></div><div class="tl-dot"></div></div></div></div>
+      <div class="tool-card-new"><div class="tool-emoji">🧠</div><div><div class="tool-info-name">NeuronWriter</div><div class="tool-info-use">NLP optimisation, semantic keyword analysis</div><div class="tool-level"><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot"></div><div class="tl-dot"></div></div></div></div>
+    </div>
+  </div>
+
+  <div class="tool-category">
+    <div class="tool-cat-label">🔍 Keyword Research</div>
+    <div class="tools-grid-new">
+      <div class="tool-card-new"><div class="tool-emoji">📊</div><div><div class="tool-info-name">Semrush</div><div class="tool-info-use">KW research, competitor analysis, site audit</div><div class="tool-level"><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot"></div></div></div></div>
+      <div class="tool-card-new"><div class="tool-emoji">🔭</div><div><div class="tool-info-name">Ahrefs</div><div class="tool-info-use">Backlink analysis, keyword explorer, rank tracking</div><div class="tool-level"><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot"></div></div></div></div>
+      <div class="tool-card-new"><div class="tool-emoji">🎯</div><div><div class="tool-info-name">Google Keyword Planner</div><div class="tool-info-use">Search volume, CPC data, keyword ideas</div><div class="tool-level"><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot f"></div></div></div></div>
+      <div class="tool-card-new"><div class="tool-emoji">💡</div><div><div class="tool-info-name">AnswerThePublic</div><div class="tool-info-use">Question-based keywords, People Also Ask</div><div class="tool-level"><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot"></div></div></div></div>
+      <div class="tool-card-new"><div class="tool-emoji">📈</div><div><div class="tool-info-name">Google Trends</div><div class="tool-info-use">Seasonal trends, trending topics, location data</div><div class="tool-level"><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot"></div></div></div></div>
+      <div class="tool-card-new"><div class="tool-emoji">🔑</div><div><div class="tool-info-name">Ubersuggest</div><div class="tool-info-use">Free KW research, SEO audit, content ideas</div><div class="tool-level"><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot"></div><div class="tl-dot"></div></div></div></div>
+    </div>
+  </div>
+
+  <div class="tool-category">
+    <div class="tool-cat-label">⚙️ Technical SEO</div>
+    <div class="tools-grid-new">
+      <div class="tool-card-new"><div class="tool-emoji">📬</div><div><div class="tool-info-name">Google Search Console</div><div class="tool-info-use">Rankings, indexing, sitemap, Core Web Vitals</div><div class="tool-level"><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot f"></div></div></div></div>
+      <div class="tool-card-new"><div class="tool-emoji">🐸</div><div><div class="tool-info-name">Screaming Frog</div><div class="tool-info-use">Full site crawl, technical audit, sitemap gen</div><div class="tool-level"><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot"></div></div></div></div>
+      <div class="tool-card-new"><div class="tool-emoji">🚀</div><div><div class="tool-info-name">PageSpeed Insights</div><div class="tool-info-use">Core Web Vitals, speed fix recommendations</div><div class="tool-level"><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot f"></div></div></div></div>
+      <div class="tool-card-new"><div class="tool-emoji">🧬</div><div><div class="tool-info-name">Schema Markup Validator</div><div class="tool-info-use">Test and validate all structured data markup</div><div class="tool-level"><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot"></div></div></div></div>
+      <div class="tool-card-new"><div class="tool-emoji">🌐</div><div><div class="tool-info-name">Bing Webmaster Tools</div><div class="tool-info-use">Bing indexing, sitemap, keyword data</div><div class="tool-level"><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot"></div><div class="tl-dot"></div></div></div></div>
+    </div>
+  </div>
+
+  <div class="tool-category">
+    <div class="tool-cat-label">📍 Local SEO</div>
+    <div class="tools-grid-new">
+      <div class="tool-card-new"><div class="tool-emoji">🗺️</div><div><div class="tool-info-name">Google Business Profile</div><div class="tool-info-use">GBP setup, posts, Q&A, photo optimisation</div><div class="tool-level"><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot f"></div></div></div></div>
+      <div class="tool-card-new"><div class="tool-emoji">📍</div><div><div class="tool-info-name">BrightLocal</div><div class="tool-info-use">Local rank tracking, citation audit, GBP reports</div><div class="tool-level"><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot"></div></div></div></div>
+      <div class="tool-card-new"><div class="tool-emoji">📋</div><div><div class="tool-info-name">Moz Local</div><div class="tool-info-use">Citation management, NAP consistency across 70+ sites</div><div class="tool-level"><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot"></div><div class="tl-dot"></div></div></div></div>
+    </div>
+  </div>
+
+  <div class="tool-category">
+    <div class="tool-cat-label">📊 Analytics & Reporting</div>
+    <div class="tools-grid-new">
+      <div class="tool-card-new"><div class="tool-emoji">📱</div><div><div class="tool-info-name">Google Analytics 4</div><div class="tool-info-use">Traffic analysis, user behaviour, conversions</div><div class="tool-level"><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot f"></div></div></div></div>
+      <div class="tool-card-new"><div class="tool-emoji">📊</div><div><div class="tool-info-name">Google Looker Studio</div><div class="tool-info-use">Automated client dashboards combining GSC + GA4</div><div class="tool-level"><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot"></div></div></div></div>
+      <div class="tool-card-new"><div class="tool-emoji">🎨</div><div><div class="tool-info-name">Canva (AI + Reports)</div><div class="tool-info-use">Monthly SEO report design, GBP post visuals</div><div class="tool-level"><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot f"></div></div></div></div>
+      <div class="tool-card-new"><div class="tool-emoji">👁️</div><div><div class="tool-info-name">Brand24</div><div class="tool-info-use">Brand mention monitoring, unlinked mention alerts</div><div class="tool-level"><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot"></div><div class="tl-dot"></div></div></div></div>
+      <div class="tool-card-new"><div class="tool-emoji">🏄</div><div><div class="tool-info-name">Surfer SEO</div><div class="tool-info-use">Content scoring, NLP optimisation, content editor</div><div class="tool-level"><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot f"></div><div class="tl-dot"></div></div></div></div>
+    </div>
+  </div>
+
+  <div style="background:var(--cream);border-radius:16px;padding:1.5rem 2rem;border-left:4px solid var(--gold);margin-top:1rem">
+    <div style="font-family:var(--mono);font-size:11px;color:var(--gold);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:8px">⭐ Skill Level Key</div>
+    <div style="display:flex;gap:2rem;flex-wrap:wrap;font-size:13px;color:#666">
+      <span>●●●●● Expert — use daily</span>
+      <span>●●●●○ Advanced — use weekly</span>
+      <span>●●●○○ Intermediate — learning actively</span>
+      <span>●●○○○ Beginner — aware of tool</span>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-header">
+    <span class="section-num">07 / Hire Me</span>
+    <h2 class="section-title">Ready to grow<br>your search presence.</h2>
+  </div>
+  <div class="contact-grid">
+    <div>
+      <p class="contact-cta">Let's build something<br><em>that ranks.</em></p>
+      <p style="font-size:14px;font-weight:300;color:#555;line-height:1.9">I am actively seeking SEO Executive opportunities in Surat and remotely across India. I bring a full-stack SEO skillset, a completed real-world case study, and a passion for driving measurable results through search.</p>
+    </div>
+    <div class="contact-links">
+      <a href="mailto:memunagandhi@email.com" class="contact-link">
+        <div class="contact-link-icon" style="background:var(--rust-light)">📧</div>
+        <div><span>Email Me</span><small>memunagandhi@email.com</small></div>
+      </a>
+      <a href="https://memunagandhi.github.io/cafe-website/" target="_blank" class="contact-link">
+        <div class="contact-link-icon" style="background:var(--blue-light)">🌐</div>
+        <div><span>Live Case Study</span><small>Maymuna's Cafe Website</small></div>
+      </a>
+      <a href="https://linkedin.com" target="_blank" class="contact-link">
+        <div class="contact-link-icon" style="background:var(--green-light)">💼</div>
+        <div><span>LinkedIn Profile</span><small>linkedin.com/in/memunagandhi</small></div>
+      </a>
+      <a href="https://github.com/memunagandhi" target="_blank" class="contact-link">
+        <div class="contact-link-icon" style="background:var(--cream)">🐙</div>
+        <div><span>GitHub</span><small>github.com/memunagandhi</small></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>© 2025 Memuna Gandhi · SEO Executive Portfolio</span>
+  <span>Surat, Gujarat, India</span>
+</footer>
+
+</body>
+</html>
